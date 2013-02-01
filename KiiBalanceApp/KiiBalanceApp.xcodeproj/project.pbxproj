@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		743807F8169EA951005789DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743807F7169EA951005789DB /* KiiSDK.framework */; };
+		743807F9169EA951005789DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743807F7169EA951005789DB /* KiiSDK.framework */; };
+		74EFEA571652287100CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
+		74EFEA591652287100CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
+		74EFEA5B1652287100CC11D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA5A1652287100CC11D5 /* CoreGraphics.framework */; };
+		74EFEA611652287100CC11D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA5F1652287100CC11D5 /* InfoPlist.strings */; };
+		74EFEA631652287100CC11D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA621652287100CC11D5 /* main.m */; };
+		74EFEA671652287100CC11D5 /* KiiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA661652287100CC11D5 /* KiiAppDelegate.m */; };
+		74EFEA691652287100CC11D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA681652287100CC11D5 /* Default.png */; };
+		74EFEA6B1652287100CC11D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA6A1652287100CC11D5 /* Default@2x.png */; };
+		74EFEA6D1652287100CC11D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA6C1652287100CC11D5 /* Default-568h@2x.png */; };
+		74EFEA7B1652287100CC11D5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA7A1652287100CC11D5 /* SenTestingKit.framework */; };
+		74EFEA7C1652287100CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
+		74EFEA7D1652287100CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
+		74EFEA851652287200CC11D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA831652287200CC11D5 /* InfoPlist.strings */; };
+		74EFEA881652287200CC11D5 /* KiiBalanceAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA871652287200CC11D5 /* KiiBalanceAppTests.m */; };
+		74EFEA92165228B800CC11D5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA91165228B800CC11D5 /* MainStoryboard_iPhone.storyboard */; };
+		74EFEAA31652293C00CC11D5 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA931652293C00CC11D5 /* 37x-Checkmark.png */; };
+		74EFEAA41652293C00CC11D5 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA941652293C00CC11D5 /* 37x-Checkmark@2x.png */; };
+		74EFEAA51652293C00CC11D5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA961652293C00CC11D5 /* MBProgressHUD.m */; };
+		74EFEAA61652293C00CC11D5 /* KiiAppSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA981652293C00CC11D5 /* KiiAppSingleton.m */; };
+		74EFEAA71652293C00CC11D5 /* KiiUserValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9A1652293C00CC11D5 /* KiiUserValidation.m */; };
+		74EFEAA81652293C00CC11D5 /* KiiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9C1652293C00CC11D5 /* KiiViewController.m */; };
+		74EFEAA91652293C00CC11D5 /* KiiLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9E1652293C00CC11D5 /* KiiLoginViewController.m */; };
+		74EFEAAA1652293C00CC11D5 /* KiiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */; };
+		74EFEAAB1652293C00CC11D5 /* KiiProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */; };
+		74EFEAB016522A5B00CC11D5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEAAF16522A5B00CC11D5 /* MobileCoreServices.framework */; };
+		74EFEAB316523AE000CC11D5 /* KiiBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */; };
+		74EFEAB416523F1000CC11D5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA961652293C00CC11D5 /* MBProgressHUD.m */; };
+		74EFEAB516523F1000CC11D5 /* KiiAppSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA981652293C00CC11D5 /* KiiAppSingleton.m */; };
+		74EFEAB616523F1000CC11D5 /* KiiUserValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9A1652293C00CC11D5 /* KiiUserValidation.m */; };
+		74EFEAB716523F1000CC11D5 /* KiiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9C1652293C00CC11D5 /* KiiViewController.m */; };
+		74EFEAB816523F1000CC11D5 /* KiiLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9E1652293C00CC11D5 /* KiiLoginViewController.m */; };
+		74EFEAB916523F1000CC11D5 /* KiiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */; };
+		74EFEABA16523F1000CC11D5 /* KiiProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */; };
+		74EFEABD165245FC00CC11D5 /* KiiBalanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */; };
+		74EFEAC016524A4600CC11D5 /* KiiSelectDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */; };
+		74EFEACB165379B700CC11D5 /* minus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEAC9165379B700CC11D5 /* minus.jpg */; };
+		74EFEACC165379B700CC11D5 /* plus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEACA165379B700CC11D5 /* plus.jpg */; };
+		74EFEACF16538A4A00CC11D5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA961652293C00CC11D5 /* MBProgressHUD.m */; };
+		74EFEAD016538A4A00CC11D5 /* KiiAppSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA981652293C00CC11D5 /* KiiAppSingleton.m */; };
+		74EFEAD116538A4A00CC11D5 /* KiiUserValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9A1652293C00CC11D5 /* KiiUserValidation.m */; };
+		74EFEAD216538A4A00CC11D5 /* KiiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9C1652293C00CC11D5 /* KiiViewController.m */; };
+		74EFEAD316538A4A00CC11D5 /* KiiLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA9E1652293C00CC11D5 /* KiiLoginViewController.m */; };
+		74EFEAD416538A4A00CC11D5 /* KiiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */; };
+		74EFEAD516538A4A00CC11D5 /* KiiProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */; };
+		74EFEAD616538A4A00CC11D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA621652287100CC11D5 /* main.m */; };
+		74EFEAD716538A4A00CC11D5 /* KiiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA661652287100CC11D5 /* KiiAppDelegate.m */; };
+		74EFEAD816538A4A00CC11D5 /* KiiBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */; };
+		74EFEAD916538A4A00CC11D5 /* KiiBalanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */; };
+		74EFEADA16538A4A00CC11D5 /* KiiSelectDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */; };
+		74EFEADC16538A4A00CC11D5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEAAF16522A5B00CC11D5 /* MobileCoreServices.framework */; };
+		74EFEADE16538A4A00CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
+		74EFEADF16538A4A00CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
+		74EFEAE016538A4A00CC11D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA5A1652287100CC11D5 /* CoreGraphics.framework */; };
+		74EFEAE216538A4A00CC11D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA5F1652287100CC11D5 /* InfoPlist.strings */; };
+		74EFEAE316538A4A00CC11D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA681652287100CC11D5 /* Default.png */; };
+		74EFEAE416538A4A00CC11D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA6A1652287100CC11D5 /* Default@2x.png */; };
+		74EFEAE516538A4A00CC11D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA6C1652287100CC11D5 /* Default-568h@2x.png */; };
+		74EFEAE616538A4A00CC11D5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEA91165228B800CC11D5 /* MainStoryboard_iPhone.storyboard */; };
+		74EFEAE716538A4A00CC11D5 /* minus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEAC9165379B700CC11D5 /* minus.jpg */; };
+		74EFEAE816538A4A00CC11D5 /* plus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEACA165379B700CC11D5 /* plus.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74EFEA7E1652287100CC11D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74EFEA491652287100CC11D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74EFEA511652287100CC11D5;
+			remoteInfo = KiiBalanceApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		743807F7169EA951005789DB /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		74EFEA521652287100CC11D5 /* KiiBalanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBalanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EFEA561652287100CC11D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74EFEA581652287100CC11D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74EFEA5A1652287100CC11D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74EFEA5E1652287100CC11D5 /* KiiBalanceApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiiBalanceApp-Info.plist"; sourceTree = "<group>"; };
+		74EFEA601652287100CC11D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74EFEA621652287100CC11D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74EFEA641652287100CC11D5 /* KiiBalanceApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiiBalanceApp-Prefix.pch"; sourceTree = "<group>"; };
+		74EFEA651652287100CC11D5 /* KiiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiiAppDelegate.h; sourceTree = "<group>"; };
+		74EFEA661652287100CC11D5 /* KiiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiAppDelegate.m; sourceTree = "<group>"; };
+		74EFEA681652287100CC11D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		74EFEA6A1652287100CC11D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		74EFEA6C1652287100CC11D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		74EFEA791652287100CC11D5 /* KiiBalanceAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiiBalanceAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EFEA7A1652287100CC11D5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74EFEA821652287200CC11D5 /* KiiBalanceAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiiBalanceAppTests-Info.plist"; sourceTree = "<group>"; };
+		74EFEA841652287200CC11D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74EFEA861652287200CC11D5 /* KiiBalanceAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiiBalanceAppTests.h; sourceTree = "<group>"; };
+		74EFEA871652287200CC11D5 /* KiiBalanceAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiBalanceAppTests.m; sourceTree = "<group>"; };
+		74EFEA91165228B800CC11D5 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74EFEA931652293C00CC11D5 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		74EFEA941652293C00CC11D5 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		74EFEA951652293C00CC11D5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		74EFEA961652293C00CC11D5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		74EFEA971652293C00CC11D5 /* KiiAppSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiAppSingleton.h; sourceTree = "<group>"; };
+		74EFEA981652293C00CC11D5 /* KiiAppSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiAppSingleton.m; sourceTree = "<group>"; };
+		74EFEA991652293C00CC11D5 /* KiiUserValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiUserValidation.h; sourceTree = "<group>"; };
+		74EFEA9A1652293C00CC11D5 /* KiiUserValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiUserValidation.m; sourceTree = "<group>"; };
+		74EFEA9B1652293C00CC11D5 /* KiiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiViewController.h; sourceTree = "<group>"; };
+		74EFEA9C1652293C00CC11D5 /* KiiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiViewController.m; sourceTree = "<group>"; };
+		74EFEA9D1652293C00CC11D5 /* KiiLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiLoginViewController.h; sourceTree = "<group>"; };
+		74EFEA9E1652293C00CC11D5 /* KiiLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiLoginViewController.m; sourceTree = "<group>"; };
+		74EFEA9F1652293C00CC11D5 /* KiiSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiSettingViewController.h; sourceTree = "<group>"; };
+		74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiSettingViewController.m; sourceTree = "<group>"; };
+		74EFEAA11652293C00CC11D5 /* KiiProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiProfileViewController.h; sourceTree = "<group>"; };
+		74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiProfileViewController.m; sourceTree = "<group>"; };
+		74EFEAAF16522A5B00CC11D5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		74EFEAB116523AE000CC11D5 /* KiiBalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiBalanceViewController.h; sourceTree = "<group>"; };
+		74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiBalanceViewController.m; sourceTree = "<group>"; };
+		74EFEABB165245FC00CC11D5 /* KiiBalanceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiBalanceDetailViewController.h; sourceTree = "<group>"; };
+		74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiBalanceDetailViewController.m; sourceTree = "<group>"; };
+		74EFEABE16524A4600CC11D5 /* KiiSelectDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiSelectDateViewController.h; sourceTree = "<group>"; };
+		74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiSelectDateViewController.m; sourceTree = "<group>"; };
+		74EFEAC9165379B700CC11D5 /* minus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minus.jpg; sourceTree = "<group>"; };
+		74EFEACA165379B700CC11D5 /* plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus.jpg; sourceTree = "<group>"; };
+		74EFEAEC16538A4A00CC11D5 /* KiiBalanceApp copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KiiBalanceApp copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EFEAEE16538A4B00CC11D5 /* KiiBalanceApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KiiBalanceApp copy-Info.plist"; path = "/Users/riza/Documents/KiiPlatform/iOSAppSample01/KiiBalanceApp/KiiBalanceApp copy-Info.plist"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74EFEA4F1652287100CC11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEAB016522A5B00CC11D5 /* MobileCoreServices.framework in Frameworks */,
+				74EFEA571652287100CC11D5 /* UIKit.framework in Frameworks */,
+				74EFEA591652287100CC11D5 /* Foundation.framework in Frameworks */,
+				74EFEA5B1652287100CC11D5 /* CoreGraphics.framework in Frameworks */,
+				743807F8169EA951005789DB /* KiiSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEA751652287100CC11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEA7B1652287100CC11D5 /* SenTestingKit.framework in Frameworks */,
+				74EFEA7C1652287100CC11D5 /* UIKit.framework in Frameworks */,
+				74EFEA7D1652287100CC11D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEADB16538A4A00CC11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEADC16538A4A00CC11D5 /* MobileCoreServices.framework in Frameworks */,
+				74EFEADE16538A4A00CC11D5 /* UIKit.framework in Frameworks */,
+				74EFEADF16538A4A00CC11D5 /* Foundation.framework in Frameworks */,
+				74EFEAE016538A4A00CC11D5 /* CoreGraphics.framework in Frameworks */,
+				743807F9169EA951005789DB /* KiiSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74EFEA471652287100CC11D5 = {
+			isa = PBXGroup;
+			children = (
+				74EFEAAF16522A5B00CC11D5 /* MobileCoreServices.framework */,
+				74EFEA5C1652287100CC11D5 /* KiiBalanceApp */,
+				74EFEA801652287100CC11D5 /* KiiBalanceAppTests */,
+				74EFEA551652287100CC11D5 /* Frameworks */,
+				74EFEA531652287100CC11D5 /* Products */,
+				74EFEAEE16538A4B00CC11D5 /* KiiBalanceApp copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		74EFEA531652287100CC11D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74EFEA521652287100CC11D5 /* KiiBalanceApp.app */,
+				74EFEA791652287100CC11D5 /* KiiBalanceAppTests.octest */,
+				74EFEAEC16538A4A00CC11D5 /* KiiBalanceApp copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74EFEA551652287100CC11D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				743807F7169EA951005789DB /* KiiSDK.framework */,
+				74EFEA561652287100CC11D5 /* UIKit.framework */,
+				74EFEA581652287100CC11D5 /* Foundation.framework */,
+				74EFEA5A1652287100CC11D5 /* CoreGraphics.framework */,
+				74EFEA7A1652287100CC11D5 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74EFEA5C1652287100CC11D5 /* KiiBalanceApp */ = {
+			isa = PBXGroup;
+			children = (
+				74EFEA931652293C00CC11D5 /* 37x-Checkmark.png */,
+				74EFEA941652293C00CC11D5 /* 37x-Checkmark@2x.png */,
+				74EFEA951652293C00CC11D5 /* MBProgressHUD.h */,
+				74EFEA961652293C00CC11D5 /* MBProgressHUD.m */,
+				74EFEA971652293C00CC11D5 /* KiiAppSingleton.h */,
+				74EFEA981652293C00CC11D5 /* KiiAppSingleton.m */,
+				74EFEA991652293C00CC11D5 /* KiiUserValidation.h */,
+				74EFEA9A1652293C00CC11D5 /* KiiUserValidation.m */,
+				74EFEA9B1652293C00CC11D5 /* KiiViewController.h */,
+				74EFEA9C1652293C00CC11D5 /* KiiViewController.m */,
+				74EFEA9D1652293C00CC11D5 /* KiiLoginViewController.h */,
+				74EFEA9E1652293C00CC11D5 /* KiiLoginViewController.m */,
+				74EFEA9F1652293C00CC11D5 /* KiiSettingViewController.h */,
+				74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */,
+				74EFEAA11652293C00CC11D5 /* KiiProfileViewController.h */,
+				74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */,
+				74EFEA91165228B800CC11D5 /* MainStoryboard_iPhone.storyboard */,
+				74EFEA651652287100CC11D5 /* KiiAppDelegate.h */,
+				74EFEA661652287100CC11D5 /* KiiAppDelegate.m */,
+				74EFEA5D1652287100CC11D5 /* Supporting Files */,
+				74EFEAB116523AE000CC11D5 /* KiiBalanceViewController.h */,
+				74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */,
+				74EFEABB165245FC00CC11D5 /* KiiBalanceDetailViewController.h */,
+				74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */,
+				74EFEABE16524A4600CC11D5 /* KiiSelectDateViewController.h */,
+				74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */,
+			);
+			path = KiiBalanceApp;
+			sourceTree = "<group>";
+		};
+		74EFEA5D1652287100CC11D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74EFEAC9165379B700CC11D5 /* minus.jpg */,
+				74EFEACA165379B700CC11D5 /* plus.jpg */,
+				74EFEA5E1652287100CC11D5 /* KiiBalanceApp-Info.plist */,
+				74EFEA5F1652287100CC11D5 /* InfoPlist.strings */,
+				74EFEA621652287100CC11D5 /* main.m */,
+				74EFEA641652287100CC11D5 /* KiiBalanceApp-Prefix.pch */,
+				74EFEA681652287100CC11D5 /* Default.png */,
+				74EFEA6A1652287100CC11D5 /* Default@2x.png */,
+				74EFEA6C1652287100CC11D5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74EFEA801652287100CC11D5 /* KiiBalanceAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				74EFEA861652287200CC11D5 /* KiiBalanceAppTests.h */,
+				74EFEA871652287200CC11D5 /* KiiBalanceAppTests.m */,
+				74EFEA811652287200CC11D5 /* Supporting Files */,
+			);
+			path = KiiBalanceAppTests;
+			sourceTree = "<group>";
+		};
+		74EFEA811652287200CC11D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74EFEA821652287200CC11D5 /* KiiBalanceAppTests-Info.plist */,
+				74EFEA831652287200CC11D5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74EFEA511652287100CC11D5 /* KiiBalanceApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74EFEA8B1652287200CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceApp" */;
+			buildPhases = (
+				74EFEA4E1652287100CC11D5 /* Sources */,
+				74EFEA4F1652287100CC11D5 /* Frameworks */,
+				74EFEA501652287100CC11D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiiBalanceApp;
+			productName = KiiBalanceApp;
+			productReference = 74EFEA521652287100CC11D5 /* KiiBalanceApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74EFEA781652287100CC11D5 /* KiiBalanceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74EFEA8E1652287200CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceAppTests" */;
+			buildPhases = (
+				74EFEA741652287100CC11D5 /* Sources */,
+				74EFEA751652287100CC11D5 /* Frameworks */,
+				74EFEA761652287100CC11D5 /* Resources */,
+				74EFEA771652287100CC11D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74EFEA7F1652287100CC11D5 /* PBXTargetDependency */,
+			);
+			name = KiiBalanceAppTests;
+			productName = KiiBalanceAppTests;
+			productReference = 74EFEA791652287100CC11D5 /* KiiBalanceAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		74EFEACD16538A4A00CC11D5 /* KiiBalanceApp release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74EFEAE916538A4A00CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceApp release" */;
+			buildPhases = (
+				74EFEACE16538A4A00CC11D5 /* Sources */,
+				74EFEADB16538A4A00CC11D5 /* Frameworks */,
+				74EFEAE116538A4A00CC11D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KiiBalanceApp release";
+			productName = KiiBalanceApp;
+			productReference = 74EFEAEC16538A4A00CC11D5 /* KiiBalanceApp copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74EFEA491652287100CC11D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Kii;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Kii Corporation";
+			};
+			buildConfigurationList = 74EFEA4C1652287100CC11D5 /* Build configuration list for PBXProject "KiiBalanceApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74EFEA471652287100CC11D5;
+			productRefGroup = 74EFEA531652287100CC11D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74EFEA511652287100CC11D5 /* KiiBalanceApp */,
+				74EFEA781652287100CC11D5 /* KiiBalanceAppTests */,
+				74EFEACD16538A4A00CC11D5 /* KiiBalanceApp release */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74EFEA501652287100CC11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEA611652287100CC11D5 /* InfoPlist.strings in Resources */,
+				74EFEA691652287100CC11D5 /* Default.png in Resources */,
+				74EFEA6B1652287100CC11D5 /* Default@2x.png in Resources */,
+				74EFEA6D1652287100CC11D5 /* Default-568h@2x.png in Resources */,
+				74EFEA92165228B800CC11D5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74EFEACB165379B700CC11D5 /* minus.jpg in Resources */,
+				74EFEACC165379B700CC11D5 /* plus.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEA761652287100CC11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEA851652287200CC11D5 /* InfoPlist.strings in Resources */,
+				74EFEAA31652293C00CC11D5 /* 37x-Checkmark.png in Resources */,
+				74EFEAA41652293C00CC11D5 /* 37x-Checkmark@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEAE116538A4A00CC11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEAE216538A4A00CC11D5 /* InfoPlist.strings in Resources */,
+				74EFEAE316538A4A00CC11D5 /* Default.png in Resources */,
+				74EFEAE416538A4A00CC11D5 /* Default@2x.png in Resources */,
+				74EFEAE516538A4A00CC11D5 /* Default-568h@2x.png in Resources */,
+				74EFEAE616538A4A00CC11D5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74EFEAE716538A4A00CC11D5 /* minus.jpg in Resources */,
+				74EFEAE816538A4A00CC11D5 /* plus.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74EFEA771652287100CC11D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74EFEA4E1652287100CC11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEAB416523F1000CC11D5 /* MBProgressHUD.m in Sources */,
+				74EFEAB516523F1000CC11D5 /* KiiAppSingleton.m in Sources */,
+				74EFEAB616523F1000CC11D5 /* KiiUserValidation.m in Sources */,
+				74EFEAB716523F1000CC11D5 /* KiiViewController.m in Sources */,
+				74EFEAB816523F1000CC11D5 /* KiiLoginViewController.m in Sources */,
+				74EFEAB916523F1000CC11D5 /* KiiSettingViewController.m in Sources */,
+				74EFEABA16523F1000CC11D5 /* KiiProfileViewController.m in Sources */,
+				74EFEA631652287100CC11D5 /* main.m in Sources */,
+				74EFEA671652287100CC11D5 /* KiiAppDelegate.m in Sources */,
+				74EFEAB316523AE000CC11D5 /* KiiBalanceViewController.m in Sources */,
+				74EFEABD165245FC00CC11D5 /* KiiBalanceDetailViewController.m in Sources */,
+				74EFEAC016524A4600CC11D5 /* KiiSelectDateViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEA741652287100CC11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEA881652287200CC11D5 /* KiiBalanceAppTests.m in Sources */,
+				74EFEAA51652293C00CC11D5 /* MBProgressHUD.m in Sources */,
+				74EFEAA61652293C00CC11D5 /* KiiAppSingleton.m in Sources */,
+				74EFEAA71652293C00CC11D5 /* KiiUserValidation.m in Sources */,
+				74EFEAA81652293C00CC11D5 /* KiiViewController.m in Sources */,
+				74EFEAA91652293C00CC11D5 /* KiiLoginViewController.m in Sources */,
+				74EFEAAA1652293C00CC11D5 /* KiiSettingViewController.m in Sources */,
+				74EFEAAB1652293C00CC11D5 /* KiiProfileViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EFEACE16538A4A00CC11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74EFEACF16538A4A00CC11D5 /* MBProgressHUD.m in Sources */,
+				74EFEAD016538A4A00CC11D5 /* KiiAppSingleton.m in Sources */,
+				74EFEAD116538A4A00CC11D5 /* KiiUserValidation.m in Sources */,
+				74EFEAD216538A4A00CC11D5 /* KiiViewController.m in Sources */,
+				74EFEAD316538A4A00CC11D5 /* KiiLoginViewController.m in Sources */,
+				74EFEAD416538A4A00CC11D5 /* KiiSettingViewController.m in Sources */,
+				74EFEAD516538A4A00CC11D5 /* KiiProfileViewController.m in Sources */,
+				74EFEAD616538A4A00CC11D5 /* main.m in Sources */,
+				74EFEAD716538A4A00CC11D5 /* KiiAppDelegate.m in Sources */,
+				74EFEAD816538A4A00CC11D5 /* KiiBalanceViewController.m in Sources */,
+				74EFEAD916538A4A00CC11D5 /* KiiBalanceDetailViewController.m in Sources */,
+				74EFEADA16538A4A00CC11D5 /* KiiSelectDateViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74EFEA7F1652287100CC11D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74EFEA511652287100CC11D5 /* KiiBalanceApp */;
+			targetProxy = 74EFEA7E1652287100CC11D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74EFEA5F1652287100CC11D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EFEA601652287100CC11D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74EFEA831652287200CC11D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74EFEA841652287200CC11D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74EFEA891652287200CC11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		74EFEA8A1652287200CC11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74EFEA8C1652287200CC11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceApp/KiiBalanceApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74EFEA8D1652287200CC11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceApp/KiiBalanceApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74EFEA8F1652287200CC11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KiiBalanceApp.app/KiiBalanceApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceAppTests/KiiBalanceAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74EFEA901652287200CC11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KiiBalanceApp.app/KiiBalanceApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceAppTests/KiiBalanceAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		74EFEAEA16538A4A00CC11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceApp copy-Info.plist";
+				PRODUCT_NAME = "KiiBalanceApp copy";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74EFEAEB16538A4A00CC11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kii Corporation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiBalanceApp/KiiBalanceApp-Prefix.pch";
+				INFOPLIST_FILE = "KiiBalanceApp copy-Info.plist";
+				PRODUCT_NAME = "KiiBalanceApp copy";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C9033F7A-F201-475D-8A9E-C857B3C032E2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74EFEA4C1652287100CC11D5 /* Build configuration list for PBXProject "KiiBalanceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EFEA891652287200CC11D5 /* Debug */,
+				74EFEA8A1652287200CC11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EFEA8B1652287200CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EFEA8C1652287200CC11D5 /* Debug */,
+				74EFEA8D1652287200CC11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EFEA8E1652287200CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EFEA8F1652287200CC11D5 /* Debug */,
+				74EFEA901652287200CC11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74EFEAE916538A4A00CC11D5 /* Build configuration list for PBXNativeTarget "KiiBalanceApp release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74EFEAEA16538A4A00CC11D5 /* Debug */,
+				74EFEAEB16538A4A00CC11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74EFEA491652287100CC11D5 /* Project object */;
+}
