@@ -129,7 +129,6 @@
 		74EFEAC9165379B700CC11D5 /* minus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minus.jpg; sourceTree = "<group>"; };
 		74EFEACA165379B700CC11D5 /* plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus.jpg; sourceTree = "<group>"; };
 		74EFEAEC16538A4A00CC11D5 /* KiiBalanceApp copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KiiBalanceApp copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74EFEAEE16538A4B00CC11D5 /* KiiBalanceApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KiiBalanceApp copy-Info.plist"; path = "/Users/riza/Documents/KiiPlatform/iOSAppSample01/KiiBalanceApp/KiiBalanceApp copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +177,6 @@
 				74EFEA801652287100CC11D5 /* KiiBalanceAppTests */,
 				74EFEA551652287100CC11D5 /* Frameworks */,
 				74EFEA531652287100CC11D5 /* Products */,
-				74EFEAEE16538A4B00CC11D5 /* KiiBalanceApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
