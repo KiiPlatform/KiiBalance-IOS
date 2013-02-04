@@ -9,6 +9,7 @@
 #import "KiiProfileViewController.h"
 #import "KiiAppSingleton.h"
 #import "KiiUserValidation.h"
+#import "MBProgressHUD.h"
 #import <KiiSDK/Kii.h>
 
 @interface KiiProfileViewController (){
@@ -49,8 +50,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(IBAction)saveProfile:(id)sender{
-    
+-(void) _saveProfile{
     KiiError *error;
     KiiUser *user = [KiiUser currentUser];
     [user setDisplayName:_userDisplayName.text];
@@ -99,12 +99,26 @@
         return;
     }
     [[KiiAppSingleton sharedInstance] loginWithToken];
-    if (isInitial) {
-        [self performSegueWithIdentifier:@"initialProfileSaveSegue" sender:nil];
+}
+-(IBAction)saveProfile:(id)sender{
+    
+    MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    [hud showAnimated:YES whileExecutingBlock:^(){
+        [self _saveProfile];
+    } completionBlock:^(){
+        [hud removeFromSuperview];
         
-    }else{
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
+        if (isInitial) {
+            [self performSegueWithIdentifier:@"initialProfileSaveSegue" sender:nil];
+            
+        }else{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
+    
+    
+    
 }
 -(void) setAsInitial{
     isInitial=YES;

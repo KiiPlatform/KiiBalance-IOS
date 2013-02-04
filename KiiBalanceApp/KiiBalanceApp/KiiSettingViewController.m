@@ -26,12 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    KiiUser* user=[KiiAppSingleton sharedInstance].currentUser;
-    //NSString* displayName=nil;
     
-   // if(nil==user.displayName)
-    self.displayNameLbl.text=user.displayName;
-    self.userNameLbl.text=user.username;
 	// Do any additional setup after loading the view.
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -40,6 +35,14 @@
     
     
     
+}
+-(void) viewDidAppear:(BOOL)animated{
+    KiiUser* user=[KiiAppSingleton sharedInstance].currentUser;
+    //NSString* displayName=nil;
+    
+   // if(nil==user.displayName)
+    self.displayNameLbl.text=user.displayName;
+    self.userNameLbl.text=user.username;
 }
 - (void)didReceiveMemoryWarning
 {
