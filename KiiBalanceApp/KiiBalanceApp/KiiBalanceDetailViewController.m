@@ -9,6 +9,7 @@
 #import "KiiBalanceDetailViewController.h"
 #import <KiiSDK/Kii.h>
 #import "KiiAppSingleton.h"
+#import "MBProgressHUD.h"
 
 @interface KiiBalanceDetailViewController (){
 
@@ -40,6 +41,16 @@
                            nil];
     [numberToolbar sizeToFit];
     self.itemAmount.inputAccessoryView = numberToolbar;
+    if (nil!=_selectedObject) {
+        self.itemName.text=[[_selectedObject dictionaryValue] objectForKey:@"name"];
+        NSNumber* amount=[[_selectedObject dictionaryValue] objectForKey:@"amount"];
+        self.itemAmount.text=[NSString stringWithFormat:@"%d",[amount integerValue]];
+        
+        NSNumber* type=[[_selectedObject dictionaryValue] objectForKey:@"type"];
+        
+        self.typeSegment.selectedSegmentIndex=[type integerValue]-1;
+        
+    }
     
 }
 -(void)cancelNumberPad{
@@ -105,23 +116,40 @@
 -(IBAction)saveAction:(id)sender{
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
     KiiObject *object = [bucket createObject];
-    KiiError* error;
+    
+    if (nil!=_selectedObject) {
+        object=_selectedObject;
+    }
+    
     [object setObject:[NSNumber numberWithLong:[self.itemAmount.text longLongValue]] forKey:@"amount"];
     [object setObject:self.itemName.text forKey:@"name"];
     
     NSInteger type=self.typeSegment.selectedSegmentIndex==0?1:2;
     [object setObject:[NSNumber numberWithInt:type] forKey:@"type"];
     
-    [object saveSynchronous:&error];
+    MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
     
-    if(nil!=error){
-        
-        NSLog(@"%@",[error description]);
-        
-    }
-    [KiiAppSingleton sharedInstance].nedToRefresh=YES;
+    [hud showAnimated:YES whileExecutingBlock:^(){
     
-    [self.navigationController popViewControllerAnimated:YES];
+        NSError* error;
+        [object saveSynchronous:&error];
+
+        if(nil!=error){
+            
+            NSLog(@"%@",[error description]);
+            
+        }
+        [KiiAppSingleton sharedInstance].nedToRefresh=YES;
+
+        
+
+    } completionBlock:^(){
+        [hud removeFromSuperview];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    
    
 }
 

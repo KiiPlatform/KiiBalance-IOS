@@ -9,10 +9,12 @@
 #import "KiiBalanceViewController.h"
 #import <KiiSDK/Kii.h>
 #import "KiiAppSingleton.h"
-
+#import "MBProgressHUD.h"
+#import "KiiBalanceDetailViewController.h"
 @interface KiiBalanceViewController (){
     NSMutableArray* _itemData;
     NSInteger _total;
+    int _selectedRow;
 }
 -(void) refreshData;
 @end
@@ -27,12 +29,25 @@
     
     _itemData=[NSMutableArray arrayWithCapacity:0];
     
-    [self refreshData];
+    MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    [hud showAnimated:YES whileExecutingBlock:^(){
+        [self refreshData];
+        //
+        
+    } completionBlock:^(){
+        self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
+        [hud removeFromSuperview];
+        [self.tableView reloadData];
+        [self.totalLbl setNeedsDisplay];
+        [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+    }];
     
    // [bucket ge]
     
 }
 -(void) refreshData{
+    
     [_itemData removeAllObjects];
     
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
@@ -61,11 +76,19 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     if([KiiAppSingleton sharedInstance].nedToRefresh){
-        [self refreshData];
-        [self.tableView reloadData];
+        MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:hud];
+        [hud showAnimated:YES whileExecutingBlock:^(){
+            [self refreshData];
+        } completionBlock:^(){
+            [self.tableView reloadData];
+            [self.totalLbl setNeedsDisplay];
+            [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+        }];
         
-        [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+        
     }
+    self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -156,7 +179,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    _selectedRow=indexPath.row;
+    [self performSegueWithIdentifier:@"editRecordSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     if ([segue.identifier isEqualToString:@"editRecordSegue"]) {
+         KiiObject* selectedObj=[_itemData objectAtIndex:_selectedRow];
+         
+         KiiBalanceDetailViewController* detailVC=[segue destinationViewController];
+         detailVC.selectedObject=selectedObj;
+         
+    }else{
+       
+    }
+
 }
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Kii View Controller-->
@@ -22,12 +22,12 @@
                     </view>
                     <connections>
                         <segue destination="Cch-yv-LSG" kind="modal" identifier="loginSegue" id="XcA-L0-Omw"/>
-                        <segue destination="lav-Sg-A3s" kind="modal" identifier="mainSegue" id="IZe-ZX-Zu8"/>
+                        <segue destination="lav-Sg-A3s" kind="modal" identifier="mainSegue1" id="IZe-ZX-Zu8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="9"/>
+            <point key="canvasLocation" x="-177" y="-3"/>
         </scene>
         <!--Navigation Controller - Balance-->
         <scene sceneID="x1J-x3-g1o">
@@ -138,7 +138,7 @@
                     <connections>
                         <outlet property="tableView" destination="Kin-Mt-d5r" id="9lE-39-aaB"/>
                         <outlet property="totalLbl" destination="tuT-s6-uRW" id="DkM-CX-jGt"/>
-                        <segue destination="Yvu-QP-k2r" kind="push" id="Dh2-4o-I3k"/>
+                        <segue destination="Yvu-QP-k2r" kind="push" identifier="editRecordSegue" id="Dh2-4o-I3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-Zn-M9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -769,7 +769,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="userName" destination="sWw-js-iYE" id="LyD-gE-dLp"/>
                         <outlet property="userPassword" destination="fcu-QP-bCJ" id="uA2-xw-buQ"/>
-                        <segue destination="lav-Sg-A3s" kind="modal" identifier="mainSegue" id="C5Y-IM-ehB"/>
+                        <segue destination="lav-Sg-A3s" kind="modal" identifier="mainSegue" modalTransitionStyle="crossDissolve" id="C5Y-IM-ehB"/>
                         <segue destination="DDw-Vp-5RM" kind="modal" identifier="initProfileSegue" id="KUc-bq-S7B"/>
                     </connections>
                 </viewController>
@@ -842,8 +842,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Dh2-4o-I3k"/>
         <segue reference="IZe-ZX-Zu8"/>
         <segue reference="G0c-ce-cwX"/>
-        <segue reference="Dh2-4o-I3k"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@
 #import "KiiUserValidation.h"
 #import <KiiSDK/Kii.h>
 #import "KiiProfileViewController.h"
+#import "MBProgressHUD.h"
 typedef enum{
     kKiiLogin,
     kKiiRegister,
@@ -18,6 +19,7 @@ typedef enum{
 
 @interface KiiLoginViewController (){
     KiiAuthType authType;
+    MBProgressHUD* hud;
 }
 -(void) doKiiUserAuthWithUserName:(NSString*) username andPassword:(NSString*) password;
 
@@ -40,6 +42,8 @@ typedef enum{
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    hud=[[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
 	// Do any additional setup after loading the view.
 }
 
@@ -87,24 +91,30 @@ typedef enum{
         default:
             break;
     }
+   
+    [hud show:YES];
+    
 }
 
 #pragma mark -
 #pragma mark Handlers
 
 - (void) authProcessComplete:(KiiUser*)user withError:(KiiError*)error {
-    
+    [hud hide:YES];
     // the request was successful
     if(error == nil) {
         // do something with the user
+        
         [KiiAppSingleton sharedInstance].currentUser=user;
         [[KiiAppSingleton sharedInstance] registerToken];
-        
+        [hud removeFromSuperview];
         
         switch (authType) {
             case kKiiLogin:
                 // Login
+               
                 [self performSegueWithIdentifier:@"mainSegue" sender:nil];
+                
                 break;
             case kKiiRegister:
                 // Register

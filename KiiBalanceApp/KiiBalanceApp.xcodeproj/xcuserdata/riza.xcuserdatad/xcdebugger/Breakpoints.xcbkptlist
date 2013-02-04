@@ -7,26 +7,26 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "KiiBalanceApp/KiiBalanceDetailViewController.m"
-         timestampString = "374571723.807269"
+         filePath = "KiiBalanceApp/KiiBalanceViewController.m"
+         timestampString = "381663560.338565"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117"
-         landmarkName = "-saveAction:"
+         startingLineNumber = "125"
+         endingLineNumber = "125"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "KiiBalanceApp/KiiBalanceViewController.m"
-         timestampString = "374571265.66578"
+         filePath = "KiiBalanceApp/KiiBalanceDetailViewController.m"
+         timestampString = "381663703.709339"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "102"
-         endingLineNumber = "102"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

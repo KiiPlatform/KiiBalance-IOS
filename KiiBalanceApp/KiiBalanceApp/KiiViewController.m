@@ -23,7 +23,7 @@
 
 -(void) viewDidAppear:(BOOL)animated{
     if ([[KiiAppSingleton sharedInstance] checkUserToken]&&[[KiiAppSingleton sharedInstance] loginWithToken]) {
-        [self performSegueWithIdentifier:@"mainSegue" sender:nil];
+        [self performSegueWithIdentifier:@"mainSegue1" sender:nil];
     }else{
             [self performSegueWithIdentifier:@"loginSegue" sender:nil];
     }
