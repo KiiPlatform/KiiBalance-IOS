@@ -11,6 +11,8 @@
 #import "KiiAppSingleton.h"
 #import "MBProgressHUD.h"
 #import "KiiBalanceDetailViewController.h"
+#import "KiiCell.h"
+
 @interface KiiBalanceViewController (){
     NSMutableArray* _itemData;
     NSInteger _total;
@@ -36,7 +38,8 @@
         //
         
     } completionBlock:^(){
-        self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
+        
+        [self generateTotal];
         [hud removeFromSuperview];
         [self.tableView reloadData];
         [self.totalLbl setNeedsDisplay];
@@ -53,7 +56,7 @@
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
     KiiQuery *query=[KiiQuery queryWithClause:nil];
     KiiError* error;
-   
+    [query sortByAsc:@"_created"];
     KiiQuery *nextQuery;
     
     
@@ -71,9 +74,22 @@
         }
         
     }
-    self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
+    [self generateTotal];
 }
-
+-(void) generateTotal{
+    NSNumber* totalAmount=[NSNumber numberWithInt:_total];
+    
+    NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
+    [currencyStyle setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSNumber* devided=[NSNumber numberWithFloat:([totalAmount floatValue]/100.00)];
+    [currencyStyle setAllowsFloats:YES];
+    [currencyStyle setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [currencyStyle setCurrencyCode:@"USD"];
+    
+    
+    NSString* formatted = [currencyStyle stringFromNumber:devided];
+    self.totalLbl.text=formatted;
+}
 -(void)viewDidAppear:(BOOL)animated{
     if([KiiAppSingleton sharedInstance].nedToRefresh){
         MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
@@ -88,7 +104,7 @@
         
         
     }
-    self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
+   
 }
 - (void)didReceiveMemoryWarning
 {
@@ -115,25 +131,57 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    KiiCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     KiiObject* obj=[_itemData objectAtIndex:indexPath.row];
-    NSLog(@"%d",indexPath.row);
+   
     
     NSString* itemName=[[obj dictionaryValue] objectForKey:@"name"];
     
     NSNumber* amount=[[obj dictionaryValue] objectForKey:@"amount"];
     
     NSNumber* type=[[obj dictionaryValue] objectForKey:@"type"];
-    cell.textLabel.text=itemName;
-    cell.detailTextLabel.text=[NSString stringWithFormat:@"%d",[amount integerValue]];
-    if ([type integerValue]==1) {
-        cell.imageView.image=[UIImage imageNamed:@"plus.jpg"];
-    }else{
-        cell.imageView.image=[UIImage imageNamed:@"minus.jpg"];
-    }
     
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate* createDate=[obj valueForKey:@"_created"];
+    
+    // set options.
+    NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
+ 
+    
+    [currencyStyle setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    [currencyStyle setAllowsFloats:YES];
+    [currencyStyle setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [currencyStyle setCurrencyCode:@"USD"];
+    // get formatted string
+    NSNumber* devidedAmount=[NSNumber numberWithFloat:([amount floatValue]/100.00)];
+    NSString* formatted = [currencyStyle stringFromNumber:devidedAmount];
+    cell.namelabel.text=itemName;
+    cell.amountlabel.text=formatted;
+    cell.datelabel.text=[formatter stringFromDate:createDate];
+    if ([type integerValue]==1) {
+        cell.iconType.image=[UIImage imageNamed:@"plus.jpg"];
+    }else{
+        cell.iconType.image=[UIImage imageNamed:@"minus.jpg"];
+    }
+    cell.amountlabel.hidden=NO;
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    KiiCell* cell=(KiiCell*)[tableView cellForRowAtIndexPath:indexPath];
+    cell.amountlabel.hidden=YES;
+    
+}
+
+-(void) tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    KiiCell* cell=(KiiCell*)[tableView cellForRowAtIndexPath:indexPath];
+    cell.amountlabel.hidden=NO;
 }
 
 /**/

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		743807F8169EA951005789DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743807F7169EA951005789DB /* KiiSDK.framework */; };
 		743807F9169EA951005789DB /* KiiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743807F7169EA951005789DB /* KiiSDK.framework */; };
+		74A4A40A16CCBD7000EAFCDA /* KiiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A40916CCBD7000EAFCDA /* KiiCell.m */; };
 		74EFEA571652287100CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
 		74EFEA591652287100CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
 		74EFEA5B1652287100CC11D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA5A1652287100CC11D5 /* CoreGraphics.framework */; };
@@ -43,7 +44,6 @@
 		74EFEAB916523F1000CC11D5 /* KiiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA01652293C00CC11D5 /* KiiSettingViewController.m */; };
 		74EFEABA16523F1000CC11D5 /* KiiProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAA21652293C00CC11D5 /* KiiProfileViewController.m */; };
 		74EFEABD165245FC00CC11D5 /* KiiBalanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */; };
-		74EFEAC016524A4600CC11D5 /* KiiSelectDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */; };
 		74EFEACB165379B700CC11D5 /* minus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEAC9165379B700CC11D5 /* minus.jpg */; };
 		74EFEACC165379B700CC11D5 /* plus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 74EFEACA165379B700CC11D5 /* plus.jpg */; };
 		74EFEACF16538A4A00CC11D5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA961652293C00CC11D5 /* MBProgressHUD.m */; };
@@ -57,7 +57,6 @@
 		74EFEAD716538A4A00CC11D5 /* KiiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEA661652287100CC11D5 /* KiiAppDelegate.m */; };
 		74EFEAD816538A4A00CC11D5 /* KiiBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */; };
 		74EFEAD916538A4A00CC11D5 /* KiiBalanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */; };
-		74EFEADA16538A4A00CC11D5 /* KiiSelectDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */; };
 		74EFEADC16538A4A00CC11D5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEAAF16522A5B00CC11D5 /* MobileCoreServices.framework */; };
 		74EFEADE16538A4A00CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
 		74EFEADF16538A4A00CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
@@ -83,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		743807F7169EA951005789DB /* KiiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KiiSDK.framework; sourceTree = "<group>"; };
+		74A4A40816CCBD7000EAFCDA /* KiiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiCell.h; sourceTree = "<group>"; };
+		74A4A40916CCBD7000EAFCDA /* KiiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiCell.m; sourceTree = "<group>"; };
 		74EFEA521652287100CC11D5 /* KiiBalanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBalanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EFEA561652287100CC11D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74EFEA581652287100CC11D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,8 +125,6 @@
 		74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiBalanceViewController.m; sourceTree = "<group>"; };
 		74EFEABB165245FC00CC11D5 /* KiiBalanceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiBalanceDetailViewController.h; sourceTree = "<group>"; };
 		74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiBalanceDetailViewController.m; sourceTree = "<group>"; };
-		74EFEABE16524A4600CC11D5 /* KiiSelectDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiSelectDateViewController.h; sourceTree = "<group>"; };
-		74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiSelectDateViewController.m; sourceTree = "<group>"; };
 		74EFEAC9165379B700CC11D5 /* minus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minus.jpg; sourceTree = "<group>"; };
 		74EFEACA165379B700CC11D5 /* plus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plus.jpg; sourceTree = "<group>"; };
 		74EFEAEC16538A4A00CC11D5 /* KiiBalanceApp copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KiiBalanceApp copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,8 +228,8 @@
 				74EFEAB216523AE000CC11D5 /* KiiBalanceViewController.m */,
 				74EFEABB165245FC00CC11D5 /* KiiBalanceDetailViewController.h */,
 				74EFEABC165245FC00CC11D5 /* KiiBalanceDetailViewController.m */,
-				74EFEABE16524A4600CC11D5 /* KiiSelectDateViewController.h */,
-				74EFEABF16524A4600CC11D5 /* KiiSelectDateViewController.m */,
+				74A4A40816CCBD7000EAFCDA /* KiiCell.h */,
+				74A4A40916CCBD7000EAFCDA /* KiiCell.m */,
 			);
 			path = KiiBalanceApp;
 			sourceTree = "<group>";
@@ -428,7 +427,7 @@
 				74EFEA671652287100CC11D5 /* KiiAppDelegate.m in Sources */,
 				74EFEAB316523AE000CC11D5 /* KiiBalanceViewController.m in Sources */,
 				74EFEABD165245FC00CC11D5 /* KiiBalanceDetailViewController.m in Sources */,
-				74EFEAC016524A4600CC11D5 /* KiiSelectDateViewController.m in Sources */,
+				74A4A40A16CCBD7000EAFCDA /* KiiCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +461,6 @@
 				74EFEAD716538A4A00CC11D5 /* KiiAppDelegate.m in Sources */,
 				74EFEAD816538A4A00CC11D5 /* KiiBalanceViewController.m in Sources */,
 				74EFEAD916538A4A00CC11D5 /* KiiBalanceDetailViewController.m in Sources */,
-				74EFEADA16538A4A00CC11D5 /* KiiSelectDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

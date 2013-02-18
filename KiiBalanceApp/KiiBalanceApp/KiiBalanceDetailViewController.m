@@ -44,7 +44,14 @@
     if (nil!=_selectedObject) {
         self.itemName.text=[[_selectedObject dictionaryValue] objectForKey:@"name"];
         NSNumber* amount=[[_selectedObject dictionaryValue] objectForKey:@"amount"];
-        self.itemAmount.text=[NSString stringWithFormat:@"%d",[amount integerValue]];
+        NSString* amountStr=[NSString stringWithFormat:@"%d",[amount integerValue]];
+        if ([amountStr length]>2) {
+            self.itemAmount.text=[amountStr substringToIndex:[amountStr length]-2];
+            self.amountCent.text=[amountStr substringFromIndex:[amountStr length]-2];
+        }else{
+            self.amountCent.text=amountStr;
+        }
+        
         
         NSNumber* type=[[_selectedObject dictionaryValue] objectForKey:@"type"];
         
@@ -101,16 +108,58 @@
     
     return YES;
 }
+#define MAXLENGTH 2
 
+- (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (textField==_amountCent) {
+        
+    
+    NSUInteger oldLength = [textField.text length];
+    NSUInteger replacementLength = [string length];
+    NSUInteger rangeLength = range.length;
+    
+    NSUInteger newLength = oldLength - rangeLength + replacementLength;
+    
+    BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
+    
+    return newLength <= MAXLENGTH || returnKey;
+    }else{
+        return YES;
+    }
+}
 -(IBAction)saveAction:(id)sender{
+    if ([_itemName.text isEqualToString:@""]) {
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Name is mandatory" message:@"Please fill name field" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        return;
+        
+    }
     KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
     KiiObject *object = [bucket createObject];
     
     if (nil!=_selectedObject) {
         object=_selectedObject;
     }
+    if ([_itemAmount.text isEqualToString:@""]) {
+        _itemAmount.text=@"0";
+    }
+    NSString* amountStr;
+    switch ([_amountCent.text length]) {
+        case 0:
+            amountStr=[NSString stringWithFormat:@"%@0",self.itemAmount.text];
+            break;
+        case 1:
+            amountStr=[NSString stringWithFormat:@"%@%@0",self.itemAmount.text,self.amountCent.text];
+            break;
+        case 2:
+        
+        default:
+            amountStr=[NSString stringWithFormat:@"%@%@",self.itemAmount.text,self.amountCent.text];
+            break;
+    }
     
-    [object setObject:[NSNumber numberWithLong:[self.itemAmount.text longLongValue]] forKey:@"amount"];
+    [object setObject:[NSNumber numberWithLong:[amountStr longLongValue]] forKey:@"amount"];
     [object setObject:self.itemName.text forKey:@"name"];
     
     NSInteger type=self.typeSegment.selectedSegmentIndex==0?1:2;
@@ -140,6 +189,32 @@
     
     
    
+}
+
+-(IBAction)deleteAction:(id)sender{
+    
+    
+    
+    if (nil==_selectedObject) {
+        return;
+        
+    }
+    MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    [hud showAnimated:YES whileExecutingBlock:^(){
+        KiiObject* object=_selectedObject;
+        NSError* error=nil;
+        [object deleteSynchronous:&error];
+        [KiiAppSingleton sharedInstance].nedToRefresh=YES;
+        
+    } completionBlock:^(){
+        
+        [hud removeFromSuperview];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }];
+    
+    
 }
 
 @end
