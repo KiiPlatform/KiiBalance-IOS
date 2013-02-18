@@ -53,7 +53,7 @@
     
     [_itemData removeAllObjects];
     
-    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"balance_book"];
     KiiQuery *query=[KiiQuery queryWithClause:nil];
     KiiError* error;
     [query sortByAsc:@"_created"];

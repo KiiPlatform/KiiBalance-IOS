@@ -135,7 +135,7 @@
         return;
         
     }
-    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"expense"];
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"balance_book"];
     KiiObject *object = [bucket createObject];
     
     if (nil!=_selectedObject) {
