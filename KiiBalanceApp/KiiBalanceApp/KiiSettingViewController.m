@@ -38,9 +38,8 @@
 }
 -(void) viewDidAppear:(BOOL)animated{
     KiiUser* user=[KiiAppSingleton sharedInstance].currentUser;
-    //NSString* displayName=nil;
     
-   // if(nil==user.displayName)
+    
     self.displayNameLbl.text=user.displayName;
     self.userNameLbl.text=user.username;
 }

@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [Kii beginWithID:@"38be627c" andKey:@"7357b8a5cfc7b4b8b5fa14671915cccf" andSite:kiiSiteUS];
+    [Kii beginWithID:@"ee573743" andKey:@"5eb7b8bc1b4e4c98e659431c69cef8d4" andSite:kiiSiteUS];
     
     // Override point for customization after application launch.
     return YES;

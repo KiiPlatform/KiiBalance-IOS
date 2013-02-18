@@ -43,7 +43,7 @@
         [hud removeFromSuperview];
         [self.tableView reloadData];
         [self.totalLbl setNeedsDisplay];
-        [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+        [KiiAppSingleton sharedInstance].needToRefresh=NO;
     }];
     
    // [bucket ge]
@@ -91,7 +91,7 @@
     self.totalLbl.text=formatted;
 }
 -(void)viewDidAppear:(BOOL)animated{
-    if([KiiAppSingleton sharedInstance].nedToRefresh){
+    if([KiiAppSingleton sharedInstance].needToRefresh){
         MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:hud];
         [hud showAnimated:YES whileExecutingBlock:^(){
@@ -99,7 +99,7 @@
         } completionBlock:^(){
             [self.tableView reloadData];
             [self.totalLbl setNeedsDisplay];
-            [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+            [KiiAppSingleton sharedInstance].needToRefresh=NO;
         }];
         
         
@@ -217,7 +217,7 @@
             [hud removeFromSuperview];
             [self.tableView reloadData];
             [self.totalLbl setNeedsDisplay];
-            [KiiAppSingleton sharedInstance].nedToRefresh=NO;
+            [KiiAppSingleton sharedInstance].needToRefresh=NO;
         }];
         
         

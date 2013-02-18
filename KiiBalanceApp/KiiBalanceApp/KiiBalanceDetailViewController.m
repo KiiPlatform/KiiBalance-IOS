@@ -178,7 +178,7 @@
             NSLog(@"%@",[error description]);
             
         }
-        [KiiAppSingleton sharedInstance].nedToRefresh=YES;
+        [KiiAppSingleton sharedInstance].needToRefresh=YES;
 
         
 
@@ -205,7 +205,7 @@
         KiiObject* object=_selectedObject;
         NSError* error=nil;
         [object deleteSynchronous:&error];
-        [KiiAppSingleton sharedInstance].nedToRefresh=YES;
+        [KiiAppSingleton sharedInstance].needToRefresh=YES;
         
     } completionBlock:^(){
         

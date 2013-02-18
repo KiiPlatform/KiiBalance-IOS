@@ -20,9 +20,9 @@
 
 
 @property(nonatomic,strong)     KiiUser* currentUser;
-@property(nonatomic, strong) UIImage* selectedPhoto;
+
 @property(nonatomic, strong) NSString* selectedObjectURI;
-@property(nonatomic,assign) BOOL nedToRefresh;
+@property(nonatomic,assign) BOOL needToRefresh;
 +(KiiAppSingleton*) sharedInstance;
 
 -(void) registerToken;
