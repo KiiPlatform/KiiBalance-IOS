@@ -8,6 +8,9 @@
 
 #import "KiiAppSingleton.h"
 #import <KiiSDK/Kii.h>
+#import "Reachability.h"
+#import "WBErrorNoticeView.h"
+
 #define Kii_TOKEN_KEY @"KII_TOKEN"
 @implementation KiiAppSingleton
 
@@ -19,6 +22,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[KiiAppSingleton alloc] init];
+        sharedInstance.internetReach=[Reachability reachabilityForInternetConnection];
+        
         // Do any other initialisation stuff here
     });
     return sharedInstance;

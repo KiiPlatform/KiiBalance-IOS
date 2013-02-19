@@ -19,3 +19,13 @@
 -(IBAction)saveProfile:(id)sender;
 -(void) setAsInitial;
 @end
+
+@interface KIICountrySetting : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+
+
+@property(nonatomic,weak) IBOutlet UIPickerView *countryPicker;
+
+-(IBAction)selectCountry:(id)sender;
+-(void) setAsInitial;
+
+@end

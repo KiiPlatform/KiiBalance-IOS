@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self isNetworkConected];
     
     _itemData=[NSMutableArray arrayWithCapacity:0];
     

@@ -27,7 +27,15 @@
     }
     return self;
 }
-
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==4) {
+        if (isInitial) {
+            [self performSegueWithIdentifier:@"countryInitSegue" sender:self];
+        }else{
+            [self performSegueWithIdentifier:@"changeCountry" sender:self];
+        }
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,6 +53,12 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (![[KiiAppSingleton sharedInstance].selectedCountry isEqualToString:@""]&&[KiiAppSingleton sharedInstance].selectedCountry!=nil) {
+        _userCountry.text=[KiiAppSingleton sharedInstance].selectedCountry;
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -99,9 +113,12 @@
         return;
     }
     [[KiiAppSingleton sharedInstance] loginWithToken];
+    [KiiAppSingleton sharedInstance].selectedCountry=nil;
 }
 -(IBAction)saveProfile:(id)sender{
-    
+    if (![self isNetworkConected]) {
+        return;
+    }
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud showAnimated:YES whileExecutingBlock:^(){
@@ -138,4 +155,87 @@
     }
     return YES;
 }
+
+-(IBAction)changeCountry:(id)sender{
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    KIICountrySetting* cSetting=[segue destinationViewController];
+    
+    if ([[segue identifier] isEqualToString:@"countryInitSegue"]) {
+        [cSetting setAsInitial];
+    }
+}
+@end
+
+
+@interface KIICountrySetting (){
+    NSArray *countryNames;
+    BOOL isInitial;
+}
+
+@end
+
+@implementation KIICountrySetting
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    countryNames=@[@"US",@"JP"];
+	// Do any additional setup after loading the view.
+}
+
+-(IBAction)selectCountry:(id)sender{
+    if (isInitial) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+
+    
+    
+}
+-(void) setAsInitial{
+    isInitial=YES;
+}
+#pragma mark -
+#pragma mark PickerView DataSource
+
+- (NSInteger)numberOfComponentsInPickerView:
+(UIPickerView *)pickerView
+{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component
+{
+    return [countryNames count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    return [countryNames objectAtIndex:row];
+}
+
+#pragma mark -
+#pragma mark PickerView Delegate
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component
+{
+    [KiiAppSingleton sharedInstance].selectedCountry=[countryNames objectAtIndex:row];
+    
+}
+
 @end

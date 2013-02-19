@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+
 @class KiiUser;
 /* This is singleton class.
  
  */
+@class Reachability,WBErrorNoticeView;
 @interface KiiAppSingleton : NSObject{
     KiiUser* currentUser;
     
 }
 
-
-
+@property(nonatomic,strong) WBErrorNoticeView *errorNotice;
+@property(nonatomic,strong) Reachability* internetReach;
 @property(nonatomic,strong)     KiiUser* currentUser;
-
+@property(nonatomic,strong) NSString* selectedCountry;
 @property(nonatomic, strong) NSString* selectedObjectURI;
 @property(nonatomic,assign) BOOL needToRefresh;
 +(KiiAppSingleton*) sharedInstance;

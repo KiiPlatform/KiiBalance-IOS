@@ -26,16 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self isNetworkConected];
     
 	// Do any additional setup after loading the view.
 }
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"%@",[segue identifier]);
-    
-    
-    
-    
-}
+
+
 -(void) viewDidAppear:(BOOL)animated{
     KiiUser* user=[KiiAppSingleton sharedInstance].currentUser;
     
