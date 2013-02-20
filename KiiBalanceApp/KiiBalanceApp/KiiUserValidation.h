@@ -10,7 +10,7 @@
 @class KiiError;
 @interface KiiUserValidation : NSObject
 
-+(void) showError:(KiiError*) error;
++(void) showError:(NSError*) error;
 +(BOOL) validateUserName:(NSString*) userName;
 +(BOOL) validateUserPassword:(NSString*) password;
 @end

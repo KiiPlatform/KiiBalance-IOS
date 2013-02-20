@@ -198,7 +198,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-ap-LH2">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-ap-LH2">
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -253,7 +253,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-JE-Scq">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10 digit item amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-JE-Scq">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="5mn-GK-rzq"/>
                                                     </constraints>
@@ -898,6 +898,7 @@
         <class className="KiiProfileViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KiiProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeCountry:"/>
                 <relationship kind="action" name="saveProfile:"/>
                 <relationship kind="outlet" name="userCountry" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="userDisplayName" candidateClass="UITextField"/>

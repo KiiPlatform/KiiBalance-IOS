@@ -112,10 +112,18 @@
 #define MAXLENGTH 2
 
 - (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
+    int maxLength=99;
     if (textField==_amountCent) {
         
+        maxLength=2;
+   
+    }else if(textField==_itemAmount){
+        maxLength=10;
+    }
     
+    else{
+        return YES;
+    }
     NSUInteger oldLength = [textField.text length];
     NSUInteger replacementLength = [string length];
     NSUInteger rangeLength = range.length;
@@ -124,10 +132,7 @@
     
     BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
     
-    return newLength <= MAXLENGTH || returnKey;
-    }else{
-        return YES;
-    }
+    return newLength <= maxLength || returnKey;
 }
 -(IBAction)saveAction:(id)sender{
     if ([_itemName.text isEqualToString:@""]) {

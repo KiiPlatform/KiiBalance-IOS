@@ -19,7 +19,7 @@
     
     return YES;
 }
-+(void) showError:(KiiError*) error{
++(void) showError:(NSError*) error{
     
     switch (error.code) {
         

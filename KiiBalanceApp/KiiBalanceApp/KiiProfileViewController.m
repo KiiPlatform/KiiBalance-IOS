@@ -11,6 +11,7 @@
 #import "KiiUserValidation.h"
 #import "MBProgressHUD.h"
 #import <KiiSDK/Kii.h>
+#import "NSString+Validation.h"
 
 @interface KiiProfileViewController (){
     BOOL isInitial;
@@ -65,8 +66,10 @@
     // Dispose of any resources that can be recreated.
 }
 -(void) _saveProfile{
-    KiiError *error;
+    NSError *error;
     KiiUser *user = [KiiUser currentUser];
+    
+       
     [user setDisplayName:_userDisplayName.text];
     [user saveSynchronous:&error];
     if(error != nil) {
@@ -119,6 +122,28 @@
     if (![self isNetworkConected]) {
         return;
     }
+    NSError *error;
+    if(![_userDisplayName.text displaynameIsValid]){
+        
+        error=[KiiError invalidUsername];
+        [KiiUserValidation showError:error];
+        return;
+    }
+    
+    if(![_userEmail.text emailIsValid]){
+        
+        error=[KiiError invalidEmailFormat];
+        [KiiUserValidation showError:error];
+        return;
+    }
+    
+    if(![_userPhone.text phoneNumberIsValid]){
+        
+        error=[KiiError invalidPhoneFormat];
+        [KiiUserValidation showError:error];
+        return;
+    }
+
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud showAnimated:YES whileExecutingBlock:^(){
