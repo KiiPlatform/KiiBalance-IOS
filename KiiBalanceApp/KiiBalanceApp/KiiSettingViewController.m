@@ -26,15 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self isNetworkConected];
+    [self isNetworkConnected];
     
 	// Do any additional setup after loading the view.
 }
 
 
 -(void) viewDidAppear:(BOOL)animated{
+    //get current user from singleton object
     KiiUser* user=[KiiAppSingleton sharedInstance].currentUser;
-    
     
     self.displayNameLbl.text=user.displayName;
     self.userNameLbl.text=user.username;

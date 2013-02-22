@@ -42,7 +42,7 @@ typedef enum{
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self isNetworkConected];
+    [self isNetworkConnected];
     
     hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
@@ -57,14 +57,14 @@ typedef enum{
 #pragma mark -
 #pragma mark IBAction
 -(IBAction)doLogin:(id)sender {
-    if (![self isNetworkConected]) {
+    if (![self isNetworkConnected]) {
         return;
     }
     authType=kKiiLogin;
     [self doKiiUserAuthWithUserName:_userName.text andPassword:_userPassword.text];
 }
 -(IBAction) doRegister:(id)sender {
-    if (![self isNetworkConected]) {
+    if (![self isNetworkConnected]) {
         return;
     }
     authType=kKiiRegister;

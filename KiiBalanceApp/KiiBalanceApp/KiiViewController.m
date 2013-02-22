@@ -22,10 +22,14 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated{
+    
+    //initial checking. Chek whether user already has token or not
     if ([[KiiAppSingleton sharedInstance] checkUserToken]&&[[KiiAppSingleton sharedInstance] loginWithToken]) {
+        //already logged go to main screen
         [self performSegueWithIdentifier:@"mainSegue1" sender:nil];
     }else{
-            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        //go to login authentication page
+        [self performSegueWithIdentifier:@"loginSegue" sender:nil];
     }
 
 }

@@ -24,13 +24,13 @@
         sharedInstance = [[KiiAppSingleton alloc] init];
         sharedInstance.internetReach=[Reachability reachabilityForInternetConnection];
         
-        // Do any other initialisation stuff here
     });
     return sharedInstance;
 }
 
 -(void) registerToken {
-   
+    //register KiiUser token to ns user default
+    
     if (nil==_currentUser) {
         return;
     }
@@ -40,12 +40,14 @@
     
 }
 -(BOOL) checkUserToken{
+    //get KiiUser token from nsuser default
     [self.currentUser accessToken];
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     return [prefs objectForKey:Kii_TOKEN_KEY]!=nil;
     
 }
 -(BOOL) loginWithToken{
+    //execute login with token
     
     KiiError* error;
     
@@ -61,6 +63,7 @@
     return NO;
 }
 -(void)doLogOut{
+    //logout operation, remove KiiUser token from nsuserdefault
     NSUserDefaults *prefs=[NSUserDefaults standardUserDefaults];
     [prefs removeObjectForKey:Kii_TOKEN_KEY];
     _currentUser=nil;

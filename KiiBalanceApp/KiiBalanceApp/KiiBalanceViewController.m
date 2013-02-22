@@ -23,20 +23,21 @@
 
 @implementation KiiBalanceViewController
 
+static NSString *BucketName = @"balance_book";
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self isNetworkConected];
+    [self isNetworkConnected];
     
     _itemData=[NSMutableArray arrayWithCapacity:0];
     
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud showAnimated:YES whileExecutingBlock:^(){
+        
         [self refreshData];
-        //
         
     } completionBlock:^(){
         
@@ -45,16 +46,17 @@
         [self.tableView reloadData];
         [self.totalLbl setNeedsDisplay];
         [KiiAppSingleton sharedInstance].needToRefresh=NO;
+        
     }];
     
-   // [bucket ge]
+    
     
 }
 -(void) refreshData{
     
     [_itemData removeAllObjects];
     
-    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:@"balance_book"];
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BucketName];
     KiiQuery *query=[KiiQuery queryWithClause:nil];
     KiiError* error;
     [query sortByAsc:@"_created"];
@@ -62,7 +64,7 @@
     
     
     NSArray *results = [bucket executeQuerySynchronous:query withError:&error andNext:&nextQuery];
-
+    
     [_itemData addObjectsFromArray:results];
     _total=0;
     for(KiiObject* obj in results){
@@ -92,6 +94,7 @@
     self.totalLbl.text=formatted;
 }
 -(void)viewDidAppear:(BOOL)animated{
+    //check wether data need to refresh or not each time screen displayed
     if([KiiAppSingleton sharedInstance].needToRefresh){
         MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:hud];
@@ -105,26 +108,26 @@
         
         
     }
-   
+    
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+    
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
+    
     // Return the number of rows in the section.
     return [_itemData count];
 }
@@ -135,7 +138,8 @@
     KiiCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     KiiObject* obj=[_itemData objectAtIndex:indexPath.row];
-   
+    
+    //parse kii object field
     
     NSString* itemName=[[obj dictionaryValue] objectForKey:@"name"];
     
@@ -150,9 +154,9 @@
     
     NSDate* createDate=[obj valueForKey:@"_created"];
     
-    // set options.
+    // set define formatter for currency
     NSNumberFormatter *currencyStyle = [[NSNumberFormatter alloc] init];
- 
+    
     
     [currencyStyle setNumberStyle:NSNumberFormatterCurrencyStyle];
     
@@ -175,6 +179,7 @@
 }
 
 -(void) tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    //hide the amount ehenever editing
     KiiCell* cell=(KiiCell*)[tableView cellForRowAtIndexPath:indexPath];
     cell.amountlabel.hidden=YES;
     
@@ -199,20 +204,20 @@
  */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete&&[self isNetworkConnected]) {
         // Delete the row from the data source
         
         MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:hud];
         [hud showAnimated:YES whileExecutingBlock:^(){
+            //delete operation
             KiiObject* object=[_itemData objectAtIndex:indexPath.row];
             NSError* error=nil;
             [object deleteSynchronous:&error];
             [self refreshData];
-            
-            //
-            
+
         } completionBlock:^(){
+            //uitable view delete row operation
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             self.totalLbl.text=[NSString stringWithFormat:@"%d",_total];
             [hud removeFromSuperview];
@@ -222,28 +227,11 @@
         }];
         
         
-        //
     }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
+    
+    
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -254,16 +242,16 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-     if ([segue.identifier isEqualToString:@"editRecordSegue"]) {
-         KiiObject* selectedObj=[_itemData objectAtIndex:_selectedRow];
-         
-         KiiBalanceDetailViewController* detailVC=[segue destinationViewController];
-         detailVC.selectedObject=selectedObj;
-         
-    }else{
-       
+    if ([segue.identifier isEqualToString:@"editRecordSegue"]) {
+        
+        KiiObject* selectedObj=[_itemData objectAtIndex:_selectedRow];
+        
+        KiiBalanceDetailViewController* detailVC=[segue destinationViewController];
+        detailVC.selectedObject=selectedObj;
+        
     }
-
+    
+    
 }
 
 @end

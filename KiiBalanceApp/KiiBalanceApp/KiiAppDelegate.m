@@ -10,15 +10,20 @@
 #import <KiiSDK/Kii.h>
 @implementation KiiAppDelegate
 
+static  NSString *APPID = @"ee573743";
+static  NSString *APPKEY = @"5eb7b8bc1b4e4c98e659431c69cef8d4";
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [Kii beginWithID:@"ee573743" andKey:@"5eb7b8bc1b4e4c98e659431c69cef8d4" andSite:kiiSiteUS];
+    //Statup Kii platform ... just one line to enable Kii Cloud integaration
+    [Kii beginWithID:APPID andKey:APPKEY andSite:kiiSiteUS];
     
     // Override point for customization after application launch.
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -27,7 +32,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

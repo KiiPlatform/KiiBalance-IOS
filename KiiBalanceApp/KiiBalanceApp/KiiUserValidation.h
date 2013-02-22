@@ -11,6 +11,5 @@
 @interface KiiUserValidation : NSObject
 
 +(void) showError:(NSError*) error;
-+(BOOL) validateUserName:(NSString*) userName;
-+(BOOL) validateUserPassword:(NSString*) password;
+
 @end

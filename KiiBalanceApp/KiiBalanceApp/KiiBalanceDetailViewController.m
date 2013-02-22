@@ -12,7 +12,7 @@
 #import "MBProgressHUD.h"
 
 @interface KiiBalanceDetailViewController (){
-
+    
 }
 
 @end
@@ -31,8 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self isNetworkConected];
-    
+    [self isNetworkConnected];
+    //UITextfield accessories definition
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     numberToolbar.barStyle = UIBarStyleBlackTranslucent;
     numberToolbar.items = [NSArray arrayWithObjects:
@@ -42,6 +42,8 @@
                            nil];
     [numberToolbar sizeToFit];
     self.itemAmount.inputAccessoryView = numberToolbar;
+    
+    //parse data and populate UI
     if (nil!=_selectedObject) {
         self.itemName.text=[[_selectedObject dictionaryValue] objectForKey:@"name"];
         NSNumber* amount=[[_selectedObject dictionaryValue] objectForKey:@"amount"];
@@ -52,7 +54,6 @@
         }else{
             self.amountCent.text=amountStr;
         }
-        
         
         NSNumber* type=[[_selectedObject dictionaryValue] objectForKey:@"type"];
         
@@ -67,7 +68,7 @@
 }
 
 -(void)doneWithNumberPad{
-   
+    
     [self.itemAmount resignFirstResponder];
 }
 - (void)didReceiveMemoryWarning
@@ -77,8 +78,8 @@
 }
 
 /*
-// Override to support conditional editing of the table view.
-*/
+ // Override to support conditional editing of the table view.
+ */
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
@@ -87,36 +88,21 @@
 
 
 
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     [textField resignFirstResponder];
     
     return YES;
 }
-#define MAXLENGTH 2
+
+
 
 - (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     int maxLength=99;
     if (textField==_amountCent) {
         
         maxLength=2;
-   
+        
     }else if(textField==_itemAmount){
         maxLength=10;
     }
@@ -134,7 +120,14 @@
     
     return newLength <= maxLength || returnKey;
 }
+//save operation
 -(IBAction)saveAction:(id)sender{
+    //avoid operation whenever no connection detected
+    if (![self isNetworkConnected]) {
+        return;
+    }
+    //validation
+    
     if ([_itemName.text isEqualToString:@""]) {
         UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Name is mandatory" message:@"Please fill name field" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
@@ -150,7 +143,11 @@
     if ([_itemAmount.text isEqualToString:@""]) {
         _itemAmount.text=@"0";
     }
+    
+    // format amount
     NSString* amountStr;
+    
+    //handle cent value
     switch ([_amountCent.text length]) {
         case 0:
             amountStr=[NSString stringWithFormat:@"%@0",self.itemAmount.text];
@@ -159,12 +156,13 @@
             amountStr=[NSString stringWithFormat:@"%@%@0",self.itemAmount.text,self.amountCent.text];
             break;
         case 2:
-        
+            
         default:
             amountStr=[NSString stringWithFormat:@"%@%@",self.itemAmount.text,self.amountCent.text];
             break;
     }
     
+    //parse values
     [object setObject:[NSNumber numberWithLong:[amountStr longLongValue]] forKey:@"amount"];
     [object setObject:self.itemName.text forKey:@"name"];
     
@@ -175,30 +173,34 @@
     [self.view addSubview:hud];
     
     [hud showAnimated:YES whileExecutingBlock:^(){
-    
+        
         NSError* error;
         [object saveSynchronous:&error];
-
+        
         if(nil!=error){
             
             NSLog(@"%@",[error description]);
             
         }
         [KiiAppSingleton sharedInstance].needToRefresh=YES;
-
         
-
+        
+        
     } completionBlock:^(){
         [hud removeFromSuperview];
         [self.navigationController popViewControllerAnimated:YES];
     }];
     
     
-   
+    
 }
 
 -(IBAction)deleteAction:(id)sender{
     
+    //avoid operation whenever no connection detected
+    if (![self isNetworkConnected]) {
+        return;
+    }
     
     
     if (nil==_selectedObject) {
@@ -208,6 +210,7 @@
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud showAnimated:YES whileExecutingBlock:^(){
+        //delete operation
         KiiObject* object=_selectedObject;
         NSError* error=nil;
         [object deleteSynchronous:&error];

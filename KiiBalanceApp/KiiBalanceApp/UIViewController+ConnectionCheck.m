@@ -14,7 +14,7 @@
 
 @implementation UIViewController (ConnectionCheck)
 
--(BOOL) isNetworkConected{
+-(BOOL) isNetworkConnected{
     if (nil==[KiiAppSingleton sharedInstance].internetReach ) {
         [KiiAppSingleton sharedInstance].internetReach  = [Reachability reachabilityForInternetConnection];
     }

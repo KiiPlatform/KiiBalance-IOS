@@ -12,6 +12,6 @@
 
 @interface UIViewController (ConnectionCheck)
 
--(BOOL) isNetworkConected;
+-(BOOL) isNetworkConnected;
 - (void)networkChanged:(NSNotification *)notification;
 @end

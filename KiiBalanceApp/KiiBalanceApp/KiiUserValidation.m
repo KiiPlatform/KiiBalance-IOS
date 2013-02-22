@@ -11,14 +11,7 @@
 
 @implementation KiiUserValidation
 
-+(BOOL) validateUserName:(NSString*) userName{
-    
-    return YES;
-}
-+(BOOL) validateUserPassword:(NSString*) password{
-    
-    return YES;
-}
+
 +(void) showError:(NSError*) error{
     
     switch (error.code) {

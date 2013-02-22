@@ -119,7 +119,7 @@
     [KiiAppSingleton sharedInstance].selectedCountry=nil;
 }
 -(IBAction)saveProfile:(id)sender{
-    if (![self isNetworkConected]) {
+    if (![self isNetworkConnected]) {
         return;
     }
     NSError *error;
