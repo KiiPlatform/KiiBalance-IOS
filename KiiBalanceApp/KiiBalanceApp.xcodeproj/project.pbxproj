@@ -13,17 +13,6 @@
 		74A4A40D16D34BD800EAFCDA /* UIViewController+ConnectionCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A40C16D34BD800EAFCDA /* UIViewController+ConnectionCheck.m */; };
 		74A4A40F16D34C9F00EAFCDA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A4A40E16D34C9F00EAFCDA /* SystemConfiguration.framework */; };
 		74A4A41216D34D5600EAFCDA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41116D34D5500EAFCDA /* Reachability.m */; };
-		74A4A42A16D35E4600EAFCDA /* NoticeView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74A4A41416D35E4600EAFCDA /* NoticeView.bundle */; };
-		74A4A42B16D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41616D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.m */; };
-		74A4A42C16D35E4600EAFCDA /* UILabel+WBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41816D35E4600EAFCDA /* UILabel+WBExtensions.m */; };
-		74A4A42D16D35E4600EAFCDA /* WBBlueGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41A16D35E4600EAFCDA /* WBBlueGradientView.m */; };
-		74A4A42E16D35E4600EAFCDA /* WBErrorNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41C16D35E4600EAFCDA /* WBErrorNoticeView.m */; };
-		74A4A42F16D35E4600EAFCDA /* WBGrayGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41E16D35E4600EAFCDA /* WBGrayGradientView.m */; };
-		74A4A43016D35E4600EAFCDA /* WBNoticeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A42016D35E4600EAFCDA /* WBNoticeOperation.m */; };
-		74A4A43116D35E4600EAFCDA /* WBNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A42316D35E4600EAFCDA /* WBNoticeView.m */; };
-		74A4A43216D35E4600EAFCDA /* WBRedGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A42516D35E4600EAFCDA /* WBRedGradientView.m */; };
-		74A4A43316D35E4600EAFCDA /* WBStickyNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A42716D35E4600EAFCDA /* WBStickyNoticeView.m */; };
-		74A4A43416D35E4600EAFCDA /* WBSuccessNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A42916D35E4600EAFCDA /* WBSuccessNoticeView.m */; };
 		74A4A43616D35E6900EAFCDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A4A43516D35E6900EAFCDA /* QuartzCore.framework */; };
 		74A4A43916D4A17600EAFCDA /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A43816D4A17600EAFCDA /* NSString+Validation.m */; };
 		74EFEA571652287100CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
@@ -105,28 +94,6 @@
 		74A4A40E16D34C9F00EAFCDA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		74A4A41016D34D5500EAFCDA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		74A4A41116D34D5500EAFCDA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		74A4A41416D35E4600EAFCDA /* NoticeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NoticeView.bundle; sourceTree = "<group>"; };
-		74A4A41516D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+WBNoticeExtensions.h"; sourceTree = "<group>"; };
-		74A4A41616D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+WBNoticeExtensions.m"; sourceTree = "<group>"; };
-		74A4A41716D35E4600EAFCDA /* UILabel+WBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WBExtensions.h"; sourceTree = "<group>"; };
-		74A4A41816D35E4600EAFCDA /* UILabel+WBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WBExtensions.m"; sourceTree = "<group>"; };
-		74A4A41916D35E4600EAFCDA /* WBBlueGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBlueGradientView.h; sourceTree = "<group>"; };
-		74A4A41A16D35E4600EAFCDA /* WBBlueGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBlueGradientView.m; sourceTree = "<group>"; };
-		74A4A41B16D35E4600EAFCDA /* WBErrorNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBErrorNoticeView.h; sourceTree = "<group>"; };
-		74A4A41C16D35E4600EAFCDA /* WBErrorNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBErrorNoticeView.m; sourceTree = "<group>"; };
-		74A4A41D16D35E4600EAFCDA /* WBGrayGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGrayGradientView.h; sourceTree = "<group>"; };
-		74A4A41E16D35E4600EAFCDA /* WBGrayGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGrayGradientView.m; sourceTree = "<group>"; };
-		74A4A41F16D35E4600EAFCDA /* WBNoticeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNoticeOperation.h; sourceTree = "<group>"; };
-		74A4A42016D35E4600EAFCDA /* WBNoticeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNoticeOperation.m; sourceTree = "<group>"; };
-		74A4A42116D35E4600EAFCDA /* WBNoticeView+ForSubclassEyesOnly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBNoticeView+ForSubclassEyesOnly.h"; sourceTree = "<group>"; };
-		74A4A42216D35E4600EAFCDA /* WBNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBNoticeView.h; sourceTree = "<group>"; };
-		74A4A42316D35E4600EAFCDA /* WBNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBNoticeView.m; sourceTree = "<group>"; };
-		74A4A42416D35E4600EAFCDA /* WBRedGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBRedGradientView.h; sourceTree = "<group>"; };
-		74A4A42516D35E4600EAFCDA /* WBRedGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBRedGradientView.m; sourceTree = "<group>"; };
-		74A4A42616D35E4600EAFCDA /* WBStickyNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStickyNoticeView.h; sourceTree = "<group>"; };
-		74A4A42716D35E4600EAFCDA /* WBStickyNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStickyNoticeView.m; sourceTree = "<group>"; };
-		74A4A42816D35E4600EAFCDA /* WBSuccessNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSuccessNoticeView.h; sourceTree = "<group>"; };
-		74A4A42916D35E4600EAFCDA /* WBSuccessNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSuccessNoticeView.m; sourceTree = "<group>"; };
 		74A4A43516D35E6900EAFCDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		74A4A43716D4A17600EAFCDA /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
 		74A4A43816D4A17600EAFCDA /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
@@ -219,28 +186,6 @@
 		74A4A41316D35E4600EAFCDA /* WBNoticeView */ = {
 			isa = PBXGroup;
 			children = (
-				74A4A41416D35E4600EAFCDA /* NoticeView.bundle */,
-				74A4A41516D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.h */,
-				74A4A41616D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.m */,
-				74A4A41716D35E4600EAFCDA /* UILabel+WBExtensions.h */,
-				74A4A41816D35E4600EAFCDA /* UILabel+WBExtensions.m */,
-				74A4A41916D35E4600EAFCDA /* WBBlueGradientView.h */,
-				74A4A41A16D35E4600EAFCDA /* WBBlueGradientView.m */,
-				74A4A41B16D35E4600EAFCDA /* WBErrorNoticeView.h */,
-				74A4A41C16D35E4600EAFCDA /* WBErrorNoticeView.m */,
-				74A4A41D16D35E4600EAFCDA /* WBGrayGradientView.h */,
-				74A4A41E16D35E4600EAFCDA /* WBGrayGradientView.m */,
-				74A4A41F16D35E4600EAFCDA /* WBNoticeOperation.h */,
-				74A4A42016D35E4600EAFCDA /* WBNoticeOperation.m */,
-				74A4A42116D35E4600EAFCDA /* WBNoticeView+ForSubclassEyesOnly.h */,
-				74A4A42216D35E4600EAFCDA /* WBNoticeView.h */,
-				74A4A42316D35E4600EAFCDA /* WBNoticeView.m */,
-				74A4A42416D35E4600EAFCDA /* WBRedGradientView.h */,
-				74A4A42516D35E4600EAFCDA /* WBRedGradientView.m */,
-				74A4A42616D35E4600EAFCDA /* WBStickyNoticeView.h */,
-				74A4A42716D35E4600EAFCDA /* WBStickyNoticeView.m */,
-				74A4A42816D35E4600EAFCDA /* WBSuccessNoticeView.h */,
-				74A4A42916D35E4600EAFCDA /* WBSuccessNoticeView.m */,
 			);
 			path = WBNoticeView;
 			sourceTree = "<group>";
@@ -452,7 +397,6 @@
 				74EFEA92165228B800CC11D5 /* MainStoryboard_iPhone.storyboard in Resources */,
 				74EFEACB165379B700CC11D5 /* minus.jpg in Resources */,
 				74EFEACC165379B700CC11D5 /* plus.jpg in Resources */,
-				74A4A42A16D35E4600EAFCDA /* NoticeView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,16 +461,6 @@
 				74A4A40A16CCBD7000EAFCDA /* KiiCell.m in Sources */,
 				74A4A40D16D34BD800EAFCDA /* UIViewController+ConnectionCheck.m in Sources */,
 				74A4A41216D34D5600EAFCDA /* Reachability.m in Sources */,
-				74A4A42B16D35E4600EAFCDA /* NSOperationQueue+WBNoticeExtensions.m in Sources */,
-				74A4A42C16D35E4600EAFCDA /* UILabel+WBExtensions.m in Sources */,
-				74A4A42D16D35E4600EAFCDA /* WBBlueGradientView.m in Sources */,
-				74A4A42E16D35E4600EAFCDA /* WBErrorNoticeView.m in Sources */,
-				74A4A42F16D35E4600EAFCDA /* WBGrayGradientView.m in Sources */,
-				74A4A43016D35E4600EAFCDA /* WBNoticeOperation.m in Sources */,
-				74A4A43116D35E4600EAFCDA /* WBNoticeView.m in Sources */,
-				74A4A43216D35E4600EAFCDA /* WBRedGradientView.m in Sources */,
-				74A4A43316D35E4600EAFCDA /* WBStickyNoticeView.m in Sources */,
-				74A4A43416D35E4600EAFCDA /* WBSuccessNoticeView.m in Sources */,
 				74A4A43916D4A17600EAFCDA /* NSString+Validation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
