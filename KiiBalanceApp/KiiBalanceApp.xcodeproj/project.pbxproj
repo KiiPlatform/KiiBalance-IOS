@@ -14,7 +14,6 @@
 		74A4A40F16D34C9F00EAFCDA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A4A40E16D34C9F00EAFCDA /* SystemConfiguration.framework */; };
 		74A4A41216D34D5600EAFCDA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A41116D34D5500EAFCDA /* Reachability.m */; };
 		74A4A43616D35E6900EAFCDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A4A43516D35E6900EAFCDA /* QuartzCore.framework */; };
-		74A4A43916D4A17600EAFCDA /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A4A43816D4A17600EAFCDA /* NSString+Validation.m */; };
 		74A4A43B16D73ED700EAFCDA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A4A43A16D73ED700EAFCDA /* icon.png */; };
 		74EFEA571652287100CC11D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA561652287100CC11D5 /* UIKit.framework */; };
 		74EFEA591652287100CC11D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EFEA581652287100CC11D5 /* Foundation.framework */; };
@@ -106,8 +105,6 @@
 		74A4A41016D34D5500EAFCDA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		74A4A41116D34D5500EAFCDA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		74A4A43516D35E6900EAFCDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		74A4A43716D4A17600EAFCDA /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
-		74A4A43816D4A17600EAFCDA /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
 		74A4A43A16D73ED700EAFCDA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = KiiBalanceApp/icon.png; sourceTree = "<group>"; };
 		74EFEA521652287100CC11D5 /* KiiBalanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBalanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EFEA561652287100CC11D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -288,8 +285,6 @@
 				74A4A40916CCBD7000EAFCDA /* KiiCell.m */,
 				74A4A40B16D34BD800EAFCDA /* UIViewController+ConnectionCheck.h */,
 				74A4A40C16D34BD800EAFCDA /* UIViewController+ConnectionCheck.m */,
-				74A4A43716D4A17600EAFCDA /* NSString+Validation.h */,
-				74A4A43816D4A17600EAFCDA /* NSString+Validation.m */,
 			);
 			path = KiiBalanceApp;
 			sourceTree = "<group>";
@@ -521,7 +516,6 @@
 				74A4A40A16CCBD7000EAFCDA /* KiiCell.m in Sources */,
 				74A4A40D16D34BD800EAFCDA /* UIViewController+ConnectionCheck.m in Sources */,
 				74A4A41216D34D5600EAFCDA /* Reachability.m in Sources */,
-				74A4A43916D4A17600EAFCDA /* NSString+Validation.m in Sources */,
 				D2DE044916D6025E000C1BFC /* NSOperationQueue+WBNoticeExtensions.m in Sources */,
 				D2DE044A16D6025E000C1BFC /* UILabel+WBExtensions.m in Sources */,
 				D2DE044B16D6025E000C1BFC /* WBBlueGradientView.m in Sources */,

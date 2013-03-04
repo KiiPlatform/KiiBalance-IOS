@@ -69,17 +69,17 @@
     NSError *error;
     KiiUser *user = [KiiUser currentUser];
     
-       
-    [user setDisplayName:_userDisplayName.text];
-    [user saveSynchronous:&error];
-    if(error != nil) {
-        // Display Name change failed
-        // Please check error description/code to see what went wrong...
-        [KiiUserValidation showError:error];
-        return;
+    if (_userDisplayName.text!=nil&&![_userDisplayName.text isEqualToString:@""]&&_userDisplayName.text!=user.displayName) {
+        [user setDisplayName:_userDisplayName.text];
+        [user saveSynchronous:&error];
+        if(error != nil) {
+            // Display Name change failed
+            // Please check error description/code to see what went wrong...
+            [KiiUserValidation showError:error];
+            return;
+        }
     }
-    
-    if (_userEmail.text!=nil&&_userEmail.text!=user.email) {
+    if (_userEmail.text!=nil&&![_userEmail.text isEqualToString:@""]&&_userEmail.text!=user.email) {
         // User - Setting predefined attributes (profile - email)
         [user changeEmailSynchronous:_userEmail.text withError:&error];
         //[user set]
@@ -93,7 +93,7 @@
     
     
     // User - Setting predefined attributes (profile - phone number)
-    if (_userPhone.text!=nil&&_userPhone.text!=user.phoneNumber) {
+    if (_userPhone.text!=nil&&![_userPhone.text isEqualToString:@""]&&_userPhone.text!=user.phoneNumber) {
         [user changePhoneSynchronous:_userPhone.text withError:&error];
         if(error != nil) {
             // Email change failed
@@ -123,27 +123,27 @@
         return;
     }
     NSError *error;
-    if(![_userDisplayName.text displaynameIsValid]){
+    if(_userDisplayName.text!=nil&&![_userDisplayName.text isEqualToString:@""]&&![_userDisplayName.text displaynameIsValid]){
         
         error=[KiiError invalidUsername];
         [KiiUserValidation showError:error];
         return;
     }
     
-    if(![_userEmail.text emailIsValid]){
+    if(_userEmail.text!=nil&&![_userEmail.text isEqualToString:@""]&&![_userEmail.text emailIsValid]){
         
         error=[KiiError invalidEmailFormat];
         [KiiUserValidation showError:error];
         return;
     }
     
-    if(![_userPhone.text phoneNumberIsValid]){
+    if(_userPhone.text!=nil&&![_userPhone.text isEqualToString:@""]&&![_userPhone.text phoneNumberIsValid]){
         
         error=[KiiError invalidPhoneFormat];
         [KiiUserValidation showError:error];
         return;
     }
-
+    
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud showAnimated:YES whileExecutingBlock:^(){
@@ -227,7 +227,7 @@
     }else{
         [self.navigationController popViewControllerAnimated:YES];
     }
-
+    
     
     
 }
