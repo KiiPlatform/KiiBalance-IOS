@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "KiiBalanceApp/KiiProfileViewController.m"
-         timestampString = "383035627.019786"
+         timestampString = "385887372.838743"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -27,6 +27,19 @@
          startingLineNumber = "14"
          endingLineNumber = "14"
          landmarkName = "-emailIsValid"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "KiiBalanceApp/KiiLoginViewController.m"
+         timestampString = "385888396.085422"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "153"
+         endingLineNumber = "153"
+         landmarkName = "-authProcessComplete:withError:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

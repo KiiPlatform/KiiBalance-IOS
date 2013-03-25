@@ -183,24 +183,27 @@
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     
-    [hud showAnimated:YES whileExecutingBlock:^(){
-        
-        NSError* error;
-        [object saveSynchronous:&error];
-        
-        if(nil!=error){
-            
-            NSLog(@"%@",[error description]);
-            
-        }
-        [KiiAppSingleton sharedInstance].needToRefresh=YES;
-        
-        
-        
-    } completionBlock:^(){
-        [hud removeFromSuperview];
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+    
+    //display hud
+    [hud show:YES];
+    
+    [object saveWithBlock:^(KiiObject *obj,NSError *error)
+     {
+         if(nil!=error){
+             //something happen
+             NSLog(@"%@",[error description]);
+             
+         }
+         //ask to refresh
+         [KiiAppSingleton sharedInstance].needToRefresh=YES;
+         
+         //remove HUD
+         [hud removeFromSuperview];
+         
+         //back to list
+         [self.navigationController popViewControllerAnimated:YES];
+     }
+     ];
     
     
     
@@ -218,21 +221,32 @@
         return;
         
     }
+    KiiObject* object=_selectedObject;
+    
     MBProgressHUD* hud=[[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
-    [hud showAnimated:YES whileExecutingBlock:^(){
-        //delete operation
-        KiiObject* object=_selectedObject;
-        NSError* error=nil;
-        [object deleteSynchronous:&error];
-        [KiiAppSingleton sharedInstance].needToRefresh=YES;
-        
-    } completionBlock:^(){
-        
-        [hud removeFromSuperview];
-        [self.navigationController popViewControllerAnimated:YES];
-        
-    }];
+    
+    //display hud
+    [hud show:YES];
+    
+    [object deleteWithBlock:^(KiiObject *obj,NSError *error)
+     {
+         if(nil!=error){
+             //something happen
+             NSLog(@"%@",[error description]);
+             
+         }
+         //ask to refresh
+         [KiiAppSingleton sharedInstance].needToRefresh=YES;
+         
+         //remove HUD
+         [hud removeFromSuperview];
+         
+         //back to list
+         [self.navigationController popViewControllerAnimated:YES];
+     }
+     ];
+    
     
     
 }
