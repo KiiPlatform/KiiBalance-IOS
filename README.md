@@ -23,3 +23,7 @@ This app uses the following features:
  + Query object in user scope bucket.
   + equal clause
   + sort by Desc
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KiiPlatform/kiibalance-ios/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
