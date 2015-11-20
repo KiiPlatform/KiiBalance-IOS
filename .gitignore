@@ -1,0 +1,6 @@
+# Cocoapod
+/Pods
+/KiiBalance.xcworkspace
+
+*.swp
+.DS_Store

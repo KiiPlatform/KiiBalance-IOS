@@ -2,21 +2,29 @@
 //  AppDelegate.m
 //  KiiBalance
 //
-//  Created by fkm on 2015/11/11.
+//  Created by Kii on 2015/11/11.
 //  Copyright © 2015年 kii. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <KiiSDK/Kii.h>
 
 @interface AppDelegate ()
 
 @end
+
+NSString* const APP_ID = @"ee573743";
+NSString* const APP_KEY = @"5eb7b8bc1b4e4c98e659431c69cef8d4";
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Kii beginWithID:APP_ID
+              andKey:APP_KEY
+             andSite:kiiSiteUS];
+    
     return YES;
 }
 
@@ -42,4 +50,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma - Page transition
+
+- (void) showTitle {
+    UINavigationController *navigation = (UINavigationController*)self.window.rootViewController;
+    UIViewController *next = [navigation.storyboard instantiateViewControllerWithIdentifier:@"Title"];
+    [navigation setViewControllers:@[next] animated:YES];
+}
+
+- (void) showBalanceList {
+    UINavigationController *navigation = (UINavigationController*)self.window.rootViewController;
+    UIViewController *next = [navigation.storyboard instantiateViewControllerWithIdentifier:@"BalanceList"];
+    [navigation setViewControllers:@[next] animated:YES];
+}
 @end
