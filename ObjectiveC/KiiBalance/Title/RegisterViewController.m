@@ -1,17 +1,26 @@
 //
-//  RegisterViewController.m
-//  KiiBalance
 //
-//  Created by Kii on 2015/11/11.
-//  Copyright © 2015年 kii. All rights reserved.
+// Copyright 2017 Kii Corporation
+// http://kii.com
 //
-
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
 #import "RegisterViewController.h"
 #import "AppDelegate.h"
 #import "KiiProgress.h"
 #import "KiiAlert.h"
 #import <KiiSDK/Kii.h>
-
 
 @interface RegisterViewController ()
 
@@ -21,28 +30,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    // Add "Register" button to NavigationItem
+
+    // Add "Register" button to NavigationItem.
     self.navigationItem.rightBarButtonItem = self.registerButton;
-    
+
     [self.usernameText becomeFirstResponder];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)backgroundTapped:(id)sender {
     [self closeKeyboard];
@@ -53,27 +46,33 @@
     [self.passwordText resignFirstResponder];
 }
 
+#pragma mark - UI event
+
 - (IBAction)registerClicked:(id)sender {
+    // Get a username and password.
     NSString *username = self.usernameText.text;
     NSString *password = self.passwordText.text;
-    
+
     [self closeKeyboard];
-    
-    UIAlertController *alert = [KiiProgress createWithMessage:@"Registering..."];
-    [self presentViewController:alert animated:NO completion:nil];
-    
+
+    // Show the progress.
+    UIAlertController *progress = [KiiProgress createWithMessage:@"Registering..."];
+    [self presentViewController:progress animated:NO completion:nil];
+
+    // Register the user.
     KiiUser *user = [KiiUser userWithUsername:username andPassword:password];
     [user performRegistrationWithBlock:^(KiiUser *user, NSError *error) {
         if (error != nil) {
-            [alert dismissViewControllerAnimated:YES completion:^{
+            [progress dismissViewControllerAnimated:YES completion:^{
                 UIAlertController *alert = [KiiAlert createWithTitle:@"Error" andMessage:error.description];
                 [self presentViewController:alert animated:YES completion:nil];
             }];
             return;
         }
-        [alert dismissViewControllerAnimated:YES completion:nil];
+        [progress dismissViewControllerAnimated:YES completion:nil];
         AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         [app showBalanceList];
     }];
 }
+
 @end

@@ -16,14 +16,14 @@
 // limitations under the License.
 //
 //
-#import <UIKit/UIKit.h>
+import Foundation
+import UIKit
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-- (void) showTitle;
-- (void) showBalanceList;
-
-@end
-
+class KiiAlert {
+    class func create(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        return alert
+    }
+}

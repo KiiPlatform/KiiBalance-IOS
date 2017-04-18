@@ -16,14 +16,18 @@
 // limitations under the License.
 //
 //
-#import <UIKit/UIKit.h>
+import Foundation
+import UIKit
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+class KiiProgress {
+    class func create(message: String) -> UIAlertController {
+        let alert = UIAlertController (title: nil, message: message + "\n\n\n", preferredStyle: .alert)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge);
+        indicator.center = CGPoint(x: 130.5, y: 65.5)
+        indicator.color = UIColor.black
+        indicator.startAnimating()
+        alert.view.addSubview(indicator)
 
-@property (strong, nonatomic) UIWindow *window;
-
-- (void) showTitle;
-- (void) showBalanceList;
-
-@end
-
+        return alert
+    }
+}

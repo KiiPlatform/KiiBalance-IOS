@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B94E0C730B398E26B88123B /* Pods_KiiBalance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE19317D9EDDF35AA246B9A /* Pods_KiiBalance.framework */; };
+		AB8C73ED1E9210D300CF9085 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C73EC1E9210D300CF9085 /* TitleViewController.swift */; };
+		AB8C73F11E92131200CF9085 /* KiiProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C73F01E92131200CF9085 /* KiiProgress.swift */; };
+		AB8C73F31E9216B900CF9085 /* KiiAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C73F21E9216B900CF9085 /* KiiAlert.swift */; };
+		ABDC71F61E9229FC00D54DA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71F51E9229FC00D54DA1 /* LoginViewController.swift */; };
+		ABDC71F81E92490200D54DA1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71F71E92490200D54DA1 /* RegisterViewController.swift */; };
+		ABDC71FA1E924FD100D54DA1 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71F91E924FD100D54DA1 /* EditItemViewController.swift */; };
+		ABDC71FC1E92502400D54DA1 /* BalanceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71FB1E92502400D54DA1 /* BalanceListViewController.swift */; };
+		ABDC71FE1E93710A00D54DA1 /* TotalAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71FD1E93710A00D54DA1 /* TotalAmountTableViewCell.swift */; };
+		ABDC72001E9371D400D54DA1 /* BalanceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC71FF1E9371D400D54DA1 /* BalanceItemTableViewCell.swift */; };
+		ABEBD57F1E8E2B2B00211855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEBD57E1E8E2B2B00211855 /* AppDelegate.swift */; };
+		ABEBD5841E8E2B2B00211855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEBD5821E8E2B2B00211855 /* Main.storyboard */; };
+		ABEBD5861E8E2B2B00211855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEBD5851E8E2B2B00211855 /* Assets.xcassets */; };
+		ABEBD5891E8E2B2B00211855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEBD5871E8E2B2B00211855 /* LaunchScreen.storyboard */; };
+		ABF2100C1E8E35D000FD7785 /* BalanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2100B1E8E35D000FD7785 /* BalanceItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6CE19317D9EDDF35AA246B9A /* Pods_KiiBalance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiiBalance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8C73EC1E9210D300CF9085 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		AB8C73F01E92131200CF9085 /* KiiProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiiProgress.swift; sourceTree = "<group>"; };
+		AB8C73F21E9216B900CF9085 /* KiiAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiiAlert.swift; sourceTree = "<group>"; };
+		ABDC71F51E9229FC00D54DA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ABDC71F71E92490200D54DA1 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		ABDC71F91E924FD100D54DA1 /* EditItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		ABDC71FB1E92502400D54DA1 /* BalanceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceListViewController.swift; sourceTree = "<group>"; };
+		ABDC71FD1E93710A00D54DA1 /* TotalAmountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalAmountTableViewCell.swift; sourceTree = "<group>"; };
+		ABDC71FF1E9371D400D54DA1 /* BalanceItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceItemTableViewCell.swift; sourceTree = "<group>"; };
+		ABEBD57B1E8E2B2B00211855 /* KiiBalance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBalance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEBD57E1E8E2B2B00211855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABEBD5831E8E2B2B00211855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABEBD5851E8E2B2B00211855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABEBD5881E8E2B2B00211855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABEBD58A1E8E2B2B00211855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF210021E8E307500FD7785 /* KiiBalance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KiiBalance.entitlements; sourceTree = "<group>"; };
+		ABF2100B1E8E35D000FD7785 /* BalanceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceItem.swift; sourceTree = "<group>"; };
+		BBED9F3D0C0FA2B544C4DA15 /* Pods-KiiBalance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiiBalance.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance.release.xcconfig"; sourceTree = "<group>"; };
+		DBDB707F8F5ABE38D108FF1A /* Pods-KiiBalance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiiBalance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABEBD5781E8E2B2B00211855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B94E0C730B398E26B88123B /* Pods_KiiBalance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		838673F723D09BC37ABB5D0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CE19317D9EDDF35AA246B9A /* Pods_KiiBalance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB8C73EB1E9210B200CF9085 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				AB8C73EC1E9210D300CF9085 /* TitleViewController.swift */,
+				ABDC71F51E9229FC00D54DA1 /* LoginViewController.swift */,
+				ABDC71F71E92490200D54DA1 /* RegisterViewController.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		AB8C73EE1E9212E600CF9085 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC71FB1E92502400D54DA1 /* BalanceListViewController.swift */,
+				ABDC71FD1E93710A00D54DA1 /* TotalAmountTableViewCell.swift */,
+				ABDC71FF1E9371D400D54DA1 /* BalanceItemTableViewCell.swift */,
+				ABDC71F91E924FD100D54DA1 /* EditItemViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		AB8C73EF1E9212EF00CF9085 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				AB8C73F01E92131200CF9085 /* KiiProgress.swift */,
+				AB8C73F21E9216B900CF9085 /* KiiAlert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		ABEBD5721E8E2B2B00211855 = {
+			isa = PBXGroup;
+			children = (
+				ABEBD57D1E8E2B2B00211855 /* KiiBalance */,
+				ABEBD57C1E8E2B2B00211855 /* Products */,
+				AECC21B9786130F1EB88E6B1 /* Pods */,
+				838673F723D09BC37ABB5D0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ABEBD57C1E8E2B2B00211855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABEBD57B1E8E2B2B00211855 /* KiiBalance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABEBD57D1E8E2B2B00211855 /* KiiBalance */ = {
+			isa = PBXGroup;
+			children = (
+				AB8C73EF1E9212EF00CF9085 /* Alert */,
+				AB8C73EE1E9212E600CF9085 /* List */,
+				AB8C73EB1E9210B200CF9085 /* Title */,
+				ABF210021E8E307500FD7785 /* KiiBalance.entitlements */,
+				ABEBD57E1E8E2B2B00211855 /* AppDelegate.swift */,
+				ABF2100B1E8E35D000FD7785 /* BalanceItem.swift */,
+				ABEBD5821E8E2B2B00211855 /* Main.storyboard */,
+				ABEBD5851E8E2B2B00211855 /* Assets.xcassets */,
+				ABEBD5871E8E2B2B00211855 /* LaunchScreen.storyboard */,
+				ABEBD58A1E8E2B2B00211855 /* Info.plist */,
+			);
+			path = KiiBalance;
+			sourceTree = "<group>";
+		};
+		AECC21B9786130F1EB88E6B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBDB707F8F5ABE38D108FF1A /* Pods-KiiBalance.debug.xcconfig */,
+				BBED9F3D0C0FA2B544C4DA15 /* Pods-KiiBalance.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABEBD57A1E8E2B2B00211855 /* KiiBalance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEBD5A31E8E2B2C00211855 /* Build configuration list for PBXNativeTarget "KiiBalance" */;
+			buildPhases = (
+				5376F75ECEEB07720FE6181C /* [CP] Check Pods Manifest.lock */,
+				ABEBD5771E8E2B2B00211855 /* Sources */,
+				ABEBD5781E8E2B2B00211855 /* Frameworks */,
+				ABEBD5791E8E2B2B00211855 /* Resources */,
+				D0A29BD59E0708B41CAF030C /* [CP] Embed Pods Frameworks */,
+				98D5DEEAFC666879DB5B0E67 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiiBalance;
+			productName = KiiBalance;
+			productReference = ABEBD57B1E8E2B2B00211855 /* KiiBalance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABEBD5731E8E2B2B00211855 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Kii;
+				TargetAttributes = {
+					ABEBD57A1E8E2B2B00211855 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = N5QLD3RVE2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ABEBD5761E8E2B2B00211855 /* Build configuration list for PBXProject "KiiBalance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABEBD5721E8E2B2B00211855;
+			productRefGroup = ABEBD57C1E8E2B2B00211855 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABEBD57A1E8E2B2B00211855 /* KiiBalance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABEBD5791E8E2B2B00211855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEBD5891E8E2B2B00211855 /* LaunchScreen.storyboard in Resources */,
+				ABEBD5861E8E2B2B00211855 /* Assets.xcassets in Resources */,
+				ABEBD5841E8E2B2B00211855 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5376F75ECEEB07720FE6181C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98D5DEEAFC666879DB5B0E67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A29BD59E0708B41CAF030C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABEBD5771E8E2B2B00211855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDC71FC1E92502400D54DA1 /* BalanceListViewController.swift in Sources */,
+				ABDC71F61E9229FC00D54DA1 /* LoginViewController.swift in Sources */,
+				ABEBD57F1E8E2B2B00211855 /* AppDelegate.swift in Sources */,
+				ABDC71F81E92490200D54DA1 /* RegisterViewController.swift in Sources */,
+				ABDC71FA1E924FD100D54DA1 /* EditItemViewController.swift in Sources */,
+				AB8C73ED1E9210D300CF9085 /* TitleViewController.swift in Sources */,
+				ABDC71FE1E93710A00D54DA1 /* TotalAmountTableViewCell.swift in Sources */,
+				AB8C73F11E92131200CF9085 /* KiiProgress.swift in Sources */,
+				AB8C73F31E9216B900CF9085 /* KiiAlert.swift in Sources */,
+				ABF2100C1E8E35D000FD7785 /* BalanceItem.swift in Sources */,
+				ABDC72001E9371D400D54DA1 /* BalanceItemTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABEBD5821E8E2B2B00211855 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEBD5831E8E2B2B00211855 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABEBD5871E8E2B2B00211855 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEBD5881E8E2B2B00211855 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABEBD5A11E8E2B2C00211855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABEBD5A21E8E2B2C00211855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABEBD5A41E8E2B2C00211855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBDB707F8F5ABE38D108FF1A /* Pods-KiiBalance.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
+				DEVELOPMENT_TEAM = N5QLD3RVE2;
+				INFOPLIST_FILE = KiiBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ABEBD5A51E8E2B2C00211855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBED9F3D0C0FA2B544C4DA15 /* Pods-KiiBalance.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
+				DEVELOPMENT_TEAM = N5QLD3RVE2;
+				INFOPLIST_FILE = KiiBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABEBD5761E8E2B2B00211855 /* Build configuration list for PBXProject "KiiBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEBD5A11E8E2B2C00211855 /* Debug */,
+				ABEBD5A21E8E2B2C00211855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABEBD5A31E8E2B2C00211855 /* Build configuration list for PBXNativeTarget "KiiBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEBD5A41E8E2B2C00211855 /* Debug */,
+				ABEBD5A51E8E2B2C00211855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABEBD5731E8E2B2B00211855 /* Project object */;
+}

@@ -1,11 +1,21 @@
 //
-//  EditItemViewController.m
-//  KiiBalance
 //
-//  Created by Kii on 2015/11/11.
-//  Copyright © 2015年 kii. All rights reserved.
+// Copyright 2017 Kii Corporation
+// http://kii.com
 //
-
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
 #import "EditItemViewController.h"
 #import "BalanceItem.h"
 #import "KiiProgress.h"
@@ -19,62 +29,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
-    // Add "Add" button to NavigationItem
+    // Add buttons to NavigationItem.
     self.navigationItem.rightBarButtonItem = self.saveButton;
-    
-    // set values
-    NSNumber *amount = [self.obj getObjectForKey:BalanceItemFieldAmount];
-    self.amountText.text = (amount == nil) ? @"0" : [NSString stringWithFormat:@"%.2lf", ([amount doubleValue] / 100.0)];
-    
-    NSString *name = [self.obj getObjectForKey:BalanceItemFieldName];
-    self.nameText.text = (name == nil) ? @"" : name;
 
-    NSNumber *typeNumber = [self.obj getObjectForKey:BalanceItemFieldType];
-    if (typeNumber == nil) {
-        self.type = BalanceItemTypeExpense;
-    } else {
-        self.type = [typeNumber intValue];
-    }
+    // Set default values.
+    self.amountText.text = [NSString stringWithFormat:@"%.2lf", ((double)self.amount / 100.0)];
+    self.nameText.text = self.name;
     [self refreshType];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)closeKeyboard{
+    [self.amountText resignFirstResponder];
+    [self.nameText resignFirstResponder];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.mode == EditItemViewModeAdd ? 1 : 2;
+    if (self.mode == EditItemViewModeAdd) {
+        return 1;
+    } else {
+        return 2;
+    }
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case 0:
-            [self.amountText becomeFirstResponder];
-            break;
-        case 1:
-            [self.nameText becomeFirstResponder];
-            break;
-        case 2:
-            [self.amountText resignFirstResponder];
-            [self.nameText resignFirstResponder];
-            [self showTypeDialog];
-            break;
-        default:
-            break;
+    // If the user tapped the "Type" field, open the dialog.
+    if (indexPath.row == 2) {
+        [self.amountText resignFirstResponder];
+        [self.nameText resignFirstResponder];
+        [self showTypeDialog];
     }
 }
 
@@ -83,19 +66,18 @@
     UIAlertAction *incomeAction = [UIAlertAction actionWithTitle:@"Income"
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction *action) {
-                                                             self.type = BalanceItemTypeIncome;
-                                                             [self refreshType];
-                                                         }];
+        self.type = BalanceItemTypeIncome;
+        [self refreshType];
+    }];
     [alert addAction:incomeAction];
     UIAlertAction *expenseAction = [UIAlertAction actionWithTitle:@"Expense"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
-                                                              self.type = BalanceItemTypeExpense;
-                                                              [self refreshType];
-                                                          }];
+        self.type = BalanceItemTypeExpense;
+        [self refreshType];
+    }];
     [alert addAction:expenseAction];
-    
-    
+
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -107,41 +89,67 @@
         case BalanceItemTypeExpense:
             self.typeLabel.text = @"Expense";
             break;
-            
         default:
             break;
     }
 }
 
 - (IBAction)saveClicked:(id)sender {
-    // read input value
-    double amount = [self.amountText.text doubleValue];
+    // Read input value.
+    double amount = (int)([self.amountText.text doubleValue] * 100);
     NSString *name = self.nameText.text;
     int type = self.type;
-    
-    [self.obj setObject:[NSNumber numberWithInt:(int)(amount * 100)] forKey:BalanceItemFieldAmount];
-    [self.obj setObject:name forKey:BalanceItemFieldName];
-    [self.obj setObject:[NSNumber numberWithInt:type] forKey:BalanceItemFieldType];
-    
+
+    // Set the default name if the value is empty.
+    if ([name isEqualToString:@""]) {
+        if (type == BalanceItemTypeIncome) {
+            name = @"Income";
+        } else {
+            name = @"Expense";
+        }
+    }
+
+    // Create a KiiObject instance.
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BalanceItemBucket];
+    KiiObject *object;
+    if (self.mode == EditItemViewModeAdd) {
+        object = [bucket createObject];
+    } else {
+        object = [bucket createObjectWithID:self.objectId];
+    }
+
+    [object setObject:[NSNumber numberWithInt:amount] forKey:BalanceItemFieldAmount];
+    [object setObject:name forKey:BalanceItemFieldName];
+    [object setObject:[NSNumber numberWithInt:type] forKey:BalanceItemFieldType];
+
+    // Show the progress.
     UIAlertController *progress = [KiiProgress createWithMessage:@"Saving Object..."];
     [self presentViewController:progress animated:NO completion:nil];
-    
-    // save:YES means force save. Overwrite the object in Kii Cloud even if it is updated by other devices.
-    [self.obj save:YES withBlock:^(KiiObject *object, NSError *error) {
+
+    // Call the KiiCloud API for saving the KiiObject on Kii Cloud.
+    [object saveWithBlock:^(KiiObject *object, NSError *error) {
         if (error != nil) {
-            [progress dismissViewControllerAnimated:NO completion:^{
+            [progress dismissViewControllerAnimated:YES completion:^{
                 UIAlertController *alert = [KiiAlert createWithTitle:@"Error" andMessage:error.description];
-                [self presentViewController:alert animated:YES completion:nil];                
+                [self presentViewController:alert animated:YES completion:nil];
             }];
             return;
         }
-        // back
+
+        // Back to the data listing screen.
+        [self closeKeyboard];
+        if (self.mode == EditItemViewModeAdd) {
+            [self.doneEditDelegate addItem:object];
+        } else {
+            [self.doneEditDelegate updateItem:object];
+        }
         [progress dismissViewControllerAnimated:NO completion:nil];
-        [self performSegueWithIdentifier:@"doneEditItem" sender:object];
+        [self performSegueWithIdentifier:@"doneEditItem" sender:nil];
     }];
 }
 
 - (IBAction)deleteClicked:(id)sender {
+    [self closeKeyboard];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm"
                                                                    message:@"Would you delete this item?"
                                                             preferredStyle:UIAlertControllerStyleAlert];
@@ -150,19 +158,25 @@
                                                          handler:nil];
     [alert addAction:cancelAction];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Yes"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction *action) {
-                                                              [self deleteItem];
-                                                          }];
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action) {
+        [self deleteItem];
+    }];
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void) deleteItem {
+    // Create a KiiObject instance with its ID.
+    KiiBucket *bucket = [[KiiUser currentUser] bucketWithName:BalanceItemBucket];
+    KiiObject *object = [bucket createObjectWithID:self.objectId];
+
+    // Show the progress.
     UIAlertController *progress = [KiiProgress createWithMessage:@"Deleting Object..."];
     [self presentViewController:progress animated:NO completion:nil];
 
-    [self.obj deleteWithBlock:^(KiiObject *object, NSError *error) {
+    // Call the KiiCloud API for deleting the KiiObject on Kii Cloud.
+    [object deleteWithBlock:^(KiiObject *object, NSError *error) {
         if (error != nil) {
             [progress dismissViewControllerAnimated:NO completion:^{
                 UIAlertController *alert = [KiiAlert createWithTitle:@"Error" andMessage:error.description];
@@ -170,9 +184,11 @@
             }];
             return;
         }
-        // back
+
+        // Back to the data listing screen.
+        [self.doneEditDelegate deleteItem:object];
         [progress dismissViewControllerAnimated:NO completion:nil];
-        [self performSegueWithIdentifier:@"doneEditItem" sender:object];
+        [self performSegueWithIdentifier:@"doneEditItem" sender:nil];
     }];
 }
 

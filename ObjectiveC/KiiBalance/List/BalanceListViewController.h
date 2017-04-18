@@ -1,18 +1,30 @@
 //
-//  BalanceListViewController.h
-//  KiiBalance
 //
-//  Created by Kii on 2015/11/11.
-//  Copyright © 2015年 kii. All rights reserved.
+// Copyright 2017 Kii Corporation
+// http://kii.com
 //
-
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+//
 #import <UIKit/UIKit.h>
+#import "EditItemViewController.h"
 
-@interface BalanceListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface BalanceListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, DoneEditDelegate>
 
-@property(weak) IBOutlet UIBarButtonItem *logoutItem;
-@property(weak) IBOutlet UIBarButtonItem *addItem;
+@property(weak) IBOutlet UIBarButtonItem *logoutButton;
+@property(weak) IBOutlet UIBarButtonItem *refreshButton;
+@property(weak) IBOutlet UIBarButtonItem *addButton;
 @property(weak) IBOutlet UITableView *tableView;
 
-@property NSMutableArray *array;
+@property NSMutableArray *items;
 @end

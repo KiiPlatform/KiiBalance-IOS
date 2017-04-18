@@ -16,14 +16,11 @@
 // limitations under the License.
 //
 //
-#import <UIKit/UIKit.h>
+import Foundation
+import UIKit
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-- (void) showTitle;
-- (void) showBalanceList;
-
-@end
-
+class BalanceItemTableViewCell : UITableViewCell {
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+}

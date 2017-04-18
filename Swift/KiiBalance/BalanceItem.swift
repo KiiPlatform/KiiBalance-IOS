@@ -16,14 +16,18 @@
 // limitations under the License.
 //
 //
-#import <UIKit/UIKit.h>
+import UIKit
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+enum BalanceItemType : Int {
+    case Income = 1
+    case Expense = 2
+}
 
-@property (strong, nonatomic) UIWindow *window;
+class BalanceItem {
+    static let Bucket = "balance_book"
 
-- (void) showTitle;
-- (void) showBalanceList;
-
-@end
-
+    static let FieldAmount = "amount"
+    static let FieldName = "name"
+    static let FieldType = "type"
+    static let FieldCreated = "_created"
+}

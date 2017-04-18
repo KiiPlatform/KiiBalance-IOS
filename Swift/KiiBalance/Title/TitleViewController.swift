@@ -16,14 +16,25 @@
 // limitations under the License.
 //
 //
-#import <UIKit/UIKit.h>
+import Foundation
+import UIKit
+import KiiSDK
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+class TitleViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-@property (strong, nonatomic) UIWindow *window;
+        // If user already logged in, go to data listing screen
+        KiiUser.authenticate(storedCredentials: { (user: KiiUser?, error: Error?) -> Void in
+            if error != nil {
+                // Show the title screen.
+                return;
+            }
 
-- (void) showTitle;
-- (void) showBalanceList;
-
-@end
+            // Show the data listing screen.
+            let app = UIApplication.shared.delegate! as! AppDelegate
+            app.showBalanceList()
+        })
+    }
+}
 
