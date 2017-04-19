@@ -23,9 +23,9 @@
 
 @end
 
-NSString* const APP_ID = @"d6fb3474";
-NSString* const APP_KEY = @"16ed23f5d46ec414d824907053a145d5";
-KiiSite const APP_SITE = kiiSiteJP;
+NSString* const APP_ID = @"ee573743";
+NSString* const APP_KEY = @"5eb7b8bc1b4e4c98e659431c69cef8d4";
+KiiSite const APP_SITE = kiiSiteUS;
 
 @implementation AppDelegate
 

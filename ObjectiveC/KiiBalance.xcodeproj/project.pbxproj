@@ -439,7 +439,7 @@
 				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
 				DEVELOPMENT_TEAM = N5QLD3RVE2;
 				INFOPLIST_FILE = KiiBalance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,7 +454,7 @@
 				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
 				DEVELOPMENT_TEAM = N5QLD3RVE2;
 				INFOPLIST_FILE = KiiBalance/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";

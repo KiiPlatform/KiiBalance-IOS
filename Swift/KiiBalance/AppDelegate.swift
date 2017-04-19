@@ -19,9 +19,9 @@
 import UIKit
 import KiiSDK
 
-let APP_ID = "d6fb3474"
-let APP_KEY = "16ed23f5d46ec414d824907053a145d5"
-let APP_SITE = KiiSite.JP
+let APP_ID = "ee573743"
+let APP_KEY = "5eb7b8bc1b4e4c98e659431c69cef8d4"
+let APP_SITE = KiiSite.US
 
 @UIApplicationMain
 class AppDelegate : UIResponder, UIApplicationDelegate {
