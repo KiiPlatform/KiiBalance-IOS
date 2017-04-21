@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'KiiBalance' do
+  pod 'KiiCloud', '2.6.4'
+end

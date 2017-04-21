@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA911C2AB8B4BC938029722 /* Pods_KiiBalance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58132CABDC574D3E4A2D03EC /* Pods_KiiBalance.framework */; };
+		ABAA46CA1E8E2D43007DE5EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAA46C91E8E2D43007DE5EA /* main.m */; };
+		ABAA46CD1E8E2D43007DE5EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAA46CC1E8E2D43007DE5EA /* AppDelegate.m */; };
+		ABAA46D31E8E2D43007DE5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA46D11E8E2D43007DE5EA /* Main.storyboard */; };
+		ABAA46D51E8E2D43007DE5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAA46D41E8E2D43007DE5EA /* Assets.xcassets */; };
+		ABAA46D81E8E2D43007DE5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA46D61E8E2D43007DE5EA /* LaunchScreen.storyboard */; };
+		ABF210051E8E34D800FD7785 /* BalanceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210041E8E34D800FD7785 /* BalanceItem.m */; };
+		ABF210411E8E5F9700FD7785 /* KiiAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2102E1E8E5F9700FD7785 /* KiiAlert.m */; };
+		ABF210421E8E5F9700FD7785 /* KiiProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210301E8E5F9700FD7785 /* KiiProgress.m */; };
+		ABF210431E8E5F9700FD7785 /* BalanceItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210331E8E5F9700FD7785 /* BalanceItemTableViewCell.m */; };
+		ABF210441E8E5F9700FD7785 /* BalanceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210351E8E5F9700FD7785 /* BalanceListViewController.m */; };
+		ABF210451E8E5F9700FD7785 /* EditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210371E8E5F9700FD7785 /* EditItemViewController.m */; };
+		ABF210461E8E5F9700FD7785 /* TotalAmountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210391E8E5F9700FD7785 /* TotalAmountTableViewCell.m */; };
+		ABF210471E8E5F9700FD7785 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2103C1E8E5F9700FD7785 /* LoginViewController.m */; };
+		ABF210481E8E5F9700FD7785 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2103E1E8E5F9700FD7785 /* RegisterViewController.m */; };
+		ABF210491E8E5F9700FD7785 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF210401E8E5F9700FD7785 /* TitleViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58132CABDC574D3E4A2D03EC /* Pods_KiiBalance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiiBalance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB913575104FFC36FF77230 /* Pods-KiiBalance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiiBalance.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance.release.xcconfig"; sourceTree = "<group>"; };
+		ABAA46C51E8E2D43007DE5EA /* KiiBalance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiiBalance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAA46C91E8E2D43007DE5EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABAA46CB1E8E2D43007DE5EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ABAA46CC1E8E2D43007DE5EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ABAA46D21E8E2D43007DE5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABAA46D41E8E2D43007DE5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABAA46D71E8E2D43007DE5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABAA46D91E8E2D43007DE5EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF210011E8E306E00FD7785 /* KiiBalance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KiiBalance.entitlements; sourceTree = "<group>"; };
+		ABF210031E8E34D800FD7785 /* BalanceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceItem.h; sourceTree = "<group>"; };
+		ABF210041E8E34D800FD7785 /* BalanceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceItem.m; sourceTree = "<group>"; };
+		ABF2102D1E8E5F9700FD7785 /* KiiAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiAlert.h; sourceTree = "<group>"; };
+		ABF2102E1E8E5F9700FD7785 /* KiiAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiAlert.m; sourceTree = "<group>"; };
+		ABF2102F1E8E5F9700FD7785 /* KiiProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KiiProgress.h; sourceTree = "<group>"; };
+		ABF210301E8E5F9700FD7785 /* KiiProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiiProgress.m; sourceTree = "<group>"; };
+		ABF210321E8E5F9700FD7785 /* BalanceItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceItemTableViewCell.h; sourceTree = "<group>"; };
+		ABF210331E8E5F9700FD7785 /* BalanceItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceItemTableViewCell.m; sourceTree = "<group>"; };
+		ABF210341E8E5F9700FD7785 /* BalanceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceListViewController.h; sourceTree = "<group>"; };
+		ABF210351E8E5F9700FD7785 /* BalanceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceListViewController.m; sourceTree = "<group>"; };
+		ABF210361E8E5F9700FD7785 /* EditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemViewController.h; sourceTree = "<group>"; };
+		ABF210371E8E5F9700FD7785 /* EditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemViewController.m; sourceTree = "<group>"; };
+		ABF210381E8E5F9700FD7785 /* TotalAmountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalAmountTableViewCell.h; sourceTree = "<group>"; };
+		ABF210391E8E5F9700FD7785 /* TotalAmountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalAmountTableViewCell.m; sourceTree = "<group>"; };
+		ABF2103B1E8E5F9700FD7785 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		ABF2103C1E8E5F9700FD7785 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		ABF2103D1E8E5F9700FD7785 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		ABF2103E1E8E5F9700FD7785 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		ABF2103F1E8E5F9700FD7785 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		ABF210401E8E5F9700FD7785 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		C660116681B2A242D6A2D922 /* Pods-KiiBalance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiiBalance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABAA46C21E8E2D43007DE5EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA911C2AB8B4BC938029722 /* Pods_KiiBalance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48BD11F8AC444428112A6462 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C660116681B2A242D6A2D922 /* Pods-KiiBalance.debug.xcconfig */,
+				8BB913575104FFC36FF77230 /* Pods-KiiBalance.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5EB835E795853E9916360528 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58132CABDC574D3E4A2D03EC /* Pods_KiiBalance.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABAA46BC1E8E2D43007DE5EA = {
+			isa = PBXGroup;
+			children = (
+				ABAA46C71E8E2D43007DE5EA /* KiiBalance */,
+				ABAA46C61E8E2D43007DE5EA /* Products */,
+				48BD11F8AC444428112A6462 /* Pods */,
+				5EB835E795853E9916360528 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ABAA46C61E8E2D43007DE5EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA46C51E8E2D43007DE5EA /* KiiBalance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABAA46C71E8E2D43007DE5EA /* KiiBalance */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2102C1E8E5F9700FD7785 /* Alert */,
+				ABF210311E8E5F9700FD7785 /* List */,
+				ABF2103A1E8E5F9700FD7785 /* Title */,
+				ABF210011E8E306E00FD7785 /* KiiBalance.entitlements */,
+				ABAA46CB1E8E2D43007DE5EA /* AppDelegate.h */,
+				ABAA46CC1E8E2D43007DE5EA /* AppDelegate.m */,
+				ABF210031E8E34D800FD7785 /* BalanceItem.h */,
+				ABF210041E8E34D800FD7785 /* BalanceItem.m */,
+				ABAA46D11E8E2D43007DE5EA /* Main.storyboard */,
+				ABAA46D41E8E2D43007DE5EA /* Assets.xcassets */,
+				ABAA46D61E8E2D43007DE5EA /* LaunchScreen.storyboard */,
+				ABAA46D91E8E2D43007DE5EA /* Info.plist */,
+				ABAA46C81E8E2D43007DE5EA /* Supporting Files */,
+			);
+			path = KiiBalance;
+			sourceTree = "<group>";
+		};
+		ABAA46C81E8E2D43007DE5EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA46C91E8E2D43007DE5EA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABF2102C1E8E5F9700FD7785 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2102D1E8E5F9700FD7785 /* KiiAlert.h */,
+				ABF2102E1E8E5F9700FD7785 /* KiiAlert.m */,
+				ABF2102F1E8E5F9700FD7785 /* KiiProgress.h */,
+				ABF210301E8E5F9700FD7785 /* KiiProgress.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		ABF210311E8E5F9700FD7785 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				ABF210341E8E5F9700FD7785 /* BalanceListViewController.h */,
+				ABF210351E8E5F9700FD7785 /* BalanceListViewController.m */,
+				ABF210381E8E5F9700FD7785 /* TotalAmountTableViewCell.h */,
+				ABF210391E8E5F9700FD7785 /* TotalAmountTableViewCell.m */,
+				ABF210321E8E5F9700FD7785 /* BalanceItemTableViewCell.h */,
+				ABF210331E8E5F9700FD7785 /* BalanceItemTableViewCell.m */,
+				ABF210361E8E5F9700FD7785 /* EditItemViewController.h */,
+				ABF210371E8E5F9700FD7785 /* EditItemViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		ABF2103A1E8E5F9700FD7785 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2103F1E8E5F9700FD7785 /* TitleViewController.h */,
+				ABF210401E8E5F9700FD7785 /* TitleViewController.m */,
+				ABF2103B1E8E5F9700FD7785 /* LoginViewController.h */,
+				ABF2103C1E8E5F9700FD7785 /* LoginViewController.m */,
+				ABF2103D1E8E5F9700FD7785 /* RegisterViewController.h */,
+				ABF2103E1E8E5F9700FD7785 /* RegisterViewController.m */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABAA46C41E8E2D43007DE5EA /* KiiBalance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABAA46F21E8E2D43007DE5EA /* Build configuration list for PBXNativeTarget "KiiBalance" */;
+			buildPhases = (
+				A08AF0302DCC24FF32537793 /* [CP] Check Pods Manifest.lock */,
+				ABAA46C11E8E2D43007DE5EA /* Sources */,
+				ABAA46C21E8E2D43007DE5EA /* Frameworks */,
+				ABAA46C31E8E2D43007DE5EA /* Resources */,
+				4E1E6B031CF53062C7F32242 /* [CP] Embed Pods Frameworks */,
+				6E72B240BDEE522CA1C04BC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiiBalance;
+			productName = KiiBalance;
+			productReference = ABAA46C51E8E2D43007DE5EA /* KiiBalance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABAA46BD1E8E2D43007DE5EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Kii;
+				TargetAttributes = {
+					ABAA46C41E8E2D43007DE5EA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = N5QLD3RVE2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ABAA46C01E8E2D43007DE5EA /* Build configuration list for PBXProject "KiiBalance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABAA46BC1E8E2D43007DE5EA;
+			productRefGroup = ABAA46C61E8E2D43007DE5EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABAA46C41E8E2D43007DE5EA /* KiiBalance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABAA46C31E8E2D43007DE5EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABAA46D81E8E2D43007DE5EA /* LaunchScreen.storyboard in Resources */,
+				ABAA46D51E8E2D43007DE5EA /* Assets.xcassets in Resources */,
+				ABAA46D31E8E2D43007DE5EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E1E6B031CF53062C7F32242 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E72B240BDEE522CA1C04BC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiiBalance/Pods-KiiBalance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A08AF0302DCC24FF32537793 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABAA46C11E8E2D43007DE5EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF210481E8E5F9700FD7785 /* RegisterViewController.m in Sources */,
+				ABF210491E8E5F9700FD7785 /* TitleViewController.m in Sources */,
+				ABF210441E8E5F9700FD7785 /* BalanceListViewController.m in Sources */,
+				ABF210051E8E34D800FD7785 /* BalanceItem.m in Sources */,
+				ABF210421E8E5F9700FD7785 /* KiiProgress.m in Sources */,
+				ABAA46CD1E8E2D43007DE5EA /* AppDelegate.m in Sources */,
+				ABF210471E8E5F9700FD7785 /* LoginViewController.m in Sources */,
+				ABF210411E8E5F9700FD7785 /* KiiAlert.m in Sources */,
+				ABF210461E8E5F9700FD7785 /* TotalAmountTableViewCell.m in Sources */,
+				ABAA46CA1E8E2D43007DE5EA /* main.m in Sources */,
+				ABF210431E8E5F9700FD7785 /* BalanceItemTableViewCell.m in Sources */,
+				ABF210451E8E5F9700FD7785 /* EditItemViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABAA46D11E8E2D43007DE5EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABAA46D21E8E2D43007DE5EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABAA46D61E8E2D43007DE5EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABAA46D71E8E2D43007DE5EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABAA46F01E8E2D43007DE5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABAA46F11E8E2D43007DE5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABAA46F31E8E2D43007DE5EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C660116681B2A242D6A2D922 /* Pods-KiiBalance.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
+				DEVELOPMENT_TEAM = N5QLD3RVE2;
+				INFOPLIST_FILE = KiiBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ABAA46F41E8E2D43007DE5EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BB913575104FFC36FF77230 /* Pods-KiiBalance.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KiiBalance/KiiBalance.entitlements;
+				DEVELOPMENT_TEAM = N5QLD3RVE2;
+				INFOPLIST_FILE = KiiBalance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kii.KiiBalance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABAA46C01E8E2D43007DE5EA /* Build configuration list for PBXProject "KiiBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAA46F01E8E2D43007DE5EA /* Debug */,
+				ABAA46F11E8E2D43007DE5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABAA46F21E8E2D43007DE5EA /* Build configuration list for PBXNativeTarget "KiiBalance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABAA46F31E8E2D43007DE5EA /* Debug */,
+				ABAA46F41E8E2D43007DE5EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABAA46BD1E8E2D43007DE5EA /* Project object */;
+}

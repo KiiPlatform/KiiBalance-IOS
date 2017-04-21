@@ -1,6 +1,12 @@
 # Cocoapod
-/Pods
-/KiiBalance.xcworkspace
+/Swift/Pods
+/Swift/Podfile.lock
+/Swift/KiiBalance.xcodeproj/xcuserdata
+/Swift/KiiBalance.xcworkspace
+/ObjectiveC/Pods
+/ObjectiveC/Podfile.lock
+/ObjectiveC/KiiBalance.xcodeproj/xcuserdata
+/ObjectiveC/KiiBalance.xcworkspace
 
 *.swp
 .DS_Store

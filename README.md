@@ -3,9 +3,7 @@ KiiBalanceIOS
 
 iOS Sample Apps for Kii Cloud storage.
 
-This apps runs on iOS 6 or later.
-
-
+This apps runs on iOS 8 or later.
 
 Features
 ----------------
@@ -14,7 +12,7 @@ This app uses the following features:
 + User Management
  + Register by username / password.
  + Login by username / password.
- + Logib by access token.
+ + Login by access token.
 
 + Cloud Storage
  + Create object in user scope.
@@ -24,6 +22,4 @@ This app uses the following features:
   + equal clause
   + sort by Desc
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KiiPlatform/kiibalance-ios/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+See http://docs.kii.com/en/samples/kii-balance/ for more details.
