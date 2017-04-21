@@ -24,7 +24,7 @@ class TitleViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // If user already logged in, go to data listing screen
+        // If the user has been logged in, show the data listing screen.
         KiiUser.authenticate(storedCredentials: { (user: KiiUser?, error: Error?) -> Void in
             if error != nil {
                 // Show the title screen.

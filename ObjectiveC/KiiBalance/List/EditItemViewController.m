@@ -53,7 +53,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // If the user tapped the "Type" field, open the dialog.
+    // If the user tapped the "Type" field, open the type dialog.
     if (indexPath.row == 2) {
         [self.amountText resignFirstResponder];
         [self.nameText resignFirstResponder];
@@ -95,7 +95,7 @@
 }
 
 - (IBAction)saveClicked:(id)sender {
-    // Read input value.
+    // Read input values.
     double amount = (int)([self.amountText.text doubleValue] * 100);
     NSString *name = self.nameText.text;
     int type = self.type;
@@ -136,7 +136,7 @@
             return;
         }
 
-        // Back to the data listing screen.
+        // Return to the data listing screen.
         [self closeKeyboard];
         if (self.mode == EditItemViewModeAdd) {
             [self.doneEditDelegate addItem:object];
@@ -185,7 +185,7 @@
             return;
         }
 
-        // Back to the data listing screen.
+        // Return to the data listing screen.
         [self.doneEditDelegate deleteItem:object];
         [progress dismissViewControllerAnimated:NO completion:nil];
         [self performSegueWithIdentifier:@"doneEditItem" sender:nil];

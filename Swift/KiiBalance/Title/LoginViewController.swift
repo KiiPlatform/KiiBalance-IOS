@@ -29,7 +29,7 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Add "Login" button to NavigationItem.
+        // Add the "Login" button to NavigationItem.
         self.navigationItem.rightBarButtonItem = self.loginButton
 
         self.usernameText.becomeFirstResponder();

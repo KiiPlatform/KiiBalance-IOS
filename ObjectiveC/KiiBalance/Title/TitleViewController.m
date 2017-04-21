@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // If user already logged in, go to data listing screen.
+    // If the user has been logged in, show the data listing screen.
     [KiiUser authenticateWithStoredCredentials:^(KiiUser *user, NSError *error) {
         if (error != nil) {
             // Show the title screen.

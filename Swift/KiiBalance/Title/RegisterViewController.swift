@@ -29,7 +29,7 @@ class RegisterViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Add "Register" button to NavigationItem.
+        // Add the "Register" button to NavigationItem.
         self.navigationItem.rightBarButtonItem = self.registerButton
 
         self.usernameText.becomeFirstResponder();

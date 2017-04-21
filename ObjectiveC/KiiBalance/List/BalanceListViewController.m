@@ -51,7 +51,7 @@
     // Pass the selected object to the new view controller.
     EditItemViewController *next = [segue destinationViewController];
     if ([segue.identifier isEqualToString:@"addItem"]) {
-        // Initialize the editing screen with empty value.
+        // Initialize the edit screen with empty values.
         next.mode = EditItemViewModeAdd;
         next.objectId = nil;
         next.name = @"";
@@ -59,7 +59,7 @@
         next.amount = 0;
         next.doneEditDelegate = self;
     } else if ([segue.identifier isEqualToString:@"editItem"]) {
-        // Initialize the editing screen with tapped KiiObject.
+        // Initialize the edit screen with values from the tapped KiiObject.
         KiiObject *obj = (KiiObject*)sender;
         next.mode = EditItemViewModeEdit;
         next.objectId = obj.uuid;
@@ -99,7 +99,7 @@
         return;
     }
 
-    // Path KiiObject to prepare(for:sender:) method.
+    // Pass a KiiObject to the prepare(for:sender:) method.
     KiiObject *obj = self.items[indexPath.row];
     [self performSegueWithIdentifier:@"editItem" sender:obj];
 }
@@ -115,7 +115,7 @@
 }
 
 - (void)updateItem: (KiiObject*)object {
-    // Replace KiiObject in self.items.
+    // Replace a KiiObject in self.items.
     for (int i = 0; i < self.items.count; i++) {
         KiiObject *objectInItems = [self.items objectAtIndexedSubscript:i];
         if ([object.uuid isEqualToString:objectInItems.uuid]) {
@@ -126,7 +126,7 @@
 }
 
 - (void)deleteItem: (KiiObject*)object {
-    // Delete KiiObject in self.items.
+    // Delete a KiiObject in self.items.
     for (int i = 0; i < self.items.count; i++) {
         KiiObject *objectInItems = [self.items objectAtIndexedSubscript:i];
         if ([object.uuid isEqualToString:objectInItems.uuid]) {
@@ -210,7 +210,7 @@
 
     NSMutableArray *objectList = [[NSMutableArray alloc] init];
 
-    // Define the recursive block to get all objects.
+    // Define a recursive block to get all KiiObjects.
     __block KiiQueryResultBlock callback = ^(KiiQuery *query, KiiBucket *bucket, NSArray *results, KiiQuery *nextQuery, NSError *error) {
         if (error != nil) {
             [progress dismissViewControllerAnimated:YES completion:^{

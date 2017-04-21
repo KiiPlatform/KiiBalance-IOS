@@ -47,7 +47,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
         // Pass the selected object to the new view controller.
         let next = segue.destination as! EditItemViewController
         if segue.identifier == "addItem" {
-            // Initialize the editing screen with empty value.
+            // Initialize the edit screen with empty values.
             next.mode = .Add
             next.objectId = nil
             next.name = ""
@@ -55,7 +55,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
             next.amount = 0
             next.doneEditDelegate = self
         } else if (segue.identifier == "editItem") {
-            // Initialize the editing screen with tapped KiiObject.
+            // Initialize the edit screen with values from the tapped KiiObject.
             let obj = sender as! KiiObject
             next.mode = .Edit
             next.objectId = obj.uuid
@@ -94,7 +94,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
             return
         }
  
-        // Path KiiObject to prepare(for:sender:) method.
+        // Pass a KiiObject to the prepare(for:sender:) method.
         let obj = self.items[indexPath.row]
         self.performSegue(withIdentifier: "editItem", sender: obj)
     }
@@ -110,7 +110,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
     }
 
     func updateItem(object: KiiObject) {
-        // Replace KiiObject in self.items.
+        // Replace a KiiObject in self.items.
         for i in 0..<self.items.count {
             let objectInItems = self.items[i]
             if object.uuid == objectInItems.uuid {
@@ -121,7 +121,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
     }
 
     func deleteItem(object: KiiObject) {
-        // Delete KiiObject in self.items.
+        // Delete a KiiObject in self.items.
         for i in 0..<self.items.count {
             let objectInItems = self.items[i]
             if object.uuid == objectInItems.uuid {
@@ -206,7 +206,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
 
         var objectList: [KiiObject] = []
 
-        // Define the recursive closure to get all objects.
+        // Define a recursive closure to get all KiiObjects.
         var callback: KiiQueryResultBlock?
         callback = { (query: KiiQuery?, bucket: KiiBucket, results: [Any]?, nextQuery: KiiQuery?, error: Error?) -> Void in
             if error != nil {

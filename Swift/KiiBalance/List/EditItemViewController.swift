@@ -71,7 +71,7 @@ class EditItemViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath:IndexPath) {
-        // If the user tapped the "Type" field, open the dialog.
+        // If the user tapped the "Type" field, open the type dialog.
         if indexPath.row == 2 {
             self.amountText.resignFirstResponder()
             self.nameText.resignFirstResponder()
@@ -104,7 +104,7 @@ class EditItemViewController : UITableViewController {
     }
 
     @IBAction func saveClicked(_ sender: Any) {
-        // Read input value.
+        // Read input values.
         let amount = Int(Double(self.amountText.text!)! * 100)
         var name = self.nameText.text
         let type = self.type
@@ -146,7 +146,7 @@ class EditItemViewController : UITableViewController {
                 })
             }
 
-            // Back to the data listing screen.
+            // Return to the data listing screen.
             self.closeKeyboard()
             if self.mode == EditItemViewMode.Add {
                 self.doneEditDelegate.addItem(object: object);
@@ -190,7 +190,7 @@ class EditItemViewController : UITableViewController {
                 })
             }
 
-            // Back to the data listing screen.
+            // Return to the data listing screen.
             self.doneEditDelegate.deleteItem(object: object);
             progress.dismiss(animated: false, completion: nil)
             self.performSegue(withIdentifier: "doneEditItem", sender: nil)
