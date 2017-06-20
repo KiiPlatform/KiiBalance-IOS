@@ -126,7 +126,7 @@
     UIAlertController *progress = [KiiProgress createWithMessage:@"Saving Object..."];
     [self presentViewController:progress animated:NO completion:nil];
 
-    // Call the KiiCloud API for saving the KiiObject on Kii Cloud.
+    // Call the Kii Cloud API for saving the KiiObject on Kii Cloud.
     [object saveWithBlock:^(KiiObject *object, NSError *error) {
         if (error != nil) {
             [progress dismissViewControllerAnimated:YES completion:^{
@@ -175,7 +175,7 @@
     UIAlertController *progress = [KiiProgress createWithMessage:@"Deleting Object..."];
     [self presentViewController:progress animated:NO completion:nil];
 
-    // Call the KiiCloud API for deleting the KiiObject on Kii Cloud.
+    // Call the Kii Cloud API for deleting the KiiObject on Kii Cloud.
     [object deleteWithBlock:^(KiiObject *object, NSError *error) {
         if (error != nil) {
             [progress dismissViewControllerAnimated:NO completion:^{

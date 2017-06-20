@@ -232,7 +232,7 @@ class BalanceListViewController : UIViewController, UITableViewDelegate, UITable
                 bucket.execute(nextQuery, with: callback!)
             }
         }
-        // Call the KiiCloud API to query KiiObjects.
+        // Call the Kii Cloud API to query KiiObjects.
         bucket.execute(query, with: callback!)
     }
 

@@ -234,7 +234,7 @@
             [bucket executeQuery:nextQuery withBlock:callback];
         }
     };
-    // Call the KiiCloud API to query KiiObjects.
+    // Call the Kii Cloud API to query KiiObjects.
     [bucket executeQuery:query withBlock:callback];
 }
 
