@@ -135,7 +135,7 @@ class EditItemViewController : UITableViewController {
         let progress = KiiProgress.create(message: "Saving Object...")
         self.present(progress, animated: false, completion: nil)
 
-        // Call the KiiCloud API for saving the KiiObject on Kii Cloud.
+        // Call the Kii Cloud API for saving the KiiObject on Kii Cloud.
         object.save { (object, error) in
             if error != nil {
                 progress.dismiss(animated: true, completion: {
@@ -179,7 +179,7 @@ class EditItemViewController : UITableViewController {
         let progress = KiiProgress.create(message: "Deleting Object...")
         self.present(progress, animated: false, completion: nil)
 
-        // Call the KiiCloud API for deleting the KiiObject on Kii Cloud.
+        // Call the Kii Cloud API for deleting the KiiObject on Kii Cloud.
         object.delete { (object, error) in
             if error != nil {
                 progress.dismiss(animated: true, completion: {
